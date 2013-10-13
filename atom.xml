@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title><![CDATA[Nateriver's Blog]]></title>
   <subtitle><![CDATA[Learning and Thinking]]></subtitle>
-  <link href="http://yoursite.com/atom.xml" rel="self"/>
-  <link href="http://yoursite.com"/>
-  <updated>2013-10-13T07:48:03.062Z</updated>
-  <id>http://yoursite.com/</id>
+  <link href="nateriver520.github.io/atom.xml" rel="self"/>
+  <link href="nateriver520.github.io"/>
+  <updated>2013-10-13T07:52:31.711Z</updated>
+  <id>nateriver520.github.io/</id>
   <author>
     <name><![CDATA[Shuo Yang]]></name>
     <email><![CDATA[shuo.yang@yahoo.com]]></email>
@@ -13,8 +13,8 @@
   <generator uri="http://zespia.tw/hexo">Hexo</generator>
   <entry>
     <title type="html"><![CDATA[Memcached 使用与简单监测]]></title>
-    <link href="http://yoursite.com/2013/10/13/memcached-使用与简单检测/"/>
-    <id>http://yoursite.com/2013/10/13/memcached-使用与简单检测/</id>
+    <link href="nateriver520.github.io/2013/10/13/memcached-使用与简单检测/"/>
+    <id>nateriver520.github.io/2013/10/13/memcached-使用与简单检测/</id>
     <published>2013-10-13T06:35:18.000Z</published>
     <updated>2013-10-13T07:27:48.000Z</updated>
     <content type="html"><![CDATA[<h2>Introduce</h2>
@@ -129,13 +129,13 @@
 <p>但有时高并发可能会出现Timeout的情况，导致缓冲没办法命中的情况，具体原因还需要进一步调查。</p>
 <p>Memcahed的作者最近用Go语言去写了<a href="https://github.com/golang/groupcache" target="_blank">groupcache</a>很值得关注。</p>
 ]]></content>
-    <category scheme="http://yoursite.com/tags/Memcached/" term="Memcached"/>
-    <category scheme="http://yoursite.com/tags/Java/" term="Java"/>
+    <category scheme="nateriver520.github.io/tags/Memcached/" term="Memcached"/>
+    <category scheme="nateriver520.github.io/tags/Java/" term="Java"/>
   </entry>
   <entry>
     <title type="html"><![CDATA[New Start]]></title>
-    <link href="http://yoursite.com/2013/10/13/new-start/"/>
-    <id>http://yoursite.com/2013/10/13/new-start/</id>
+    <link href="nateriver520.github.io/2013/10/13/new-start/"/>
+    <id>nateriver520.github.io/2013/10/13/new-start/</id>
     <published>2013-10-12T17:19:09.000Z</published>
     <updated>2013-10-13T07:29:05.000Z</updated>
     <content type="html"><![CDATA[<p>一直以来自己都没有记录的习惯，平常最多在evernote上记录些重要的信息。</p>
@@ -156,6 +156,6 @@
 <li>每周写算法</li>
 </ul>
 ]]></content>
-    <category scheme="http://yoursite.com/tags/Life/" term="Life"/>
+    <category scheme="nateriver520.github.io/tags/Life/" term="Life"/>
   </entry>
 </feed>
