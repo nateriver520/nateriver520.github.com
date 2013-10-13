@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Life | Nateriver's Blog</title>
+  <title>Java | Nateriver's Blog</title>
   <meta name="author" content="Shuo Yang">
   
   
@@ -45,7 +45,7 @@
 <div class="clearfix"></div></header>
   <div id="content" class="inner">
     <div id="main-col" class="alignleft"><div id="wrapper">
-<h2 class="archive-title tag">Life</h2>
+<h2 class="archive-title tag">Java</h2>
 
 
   
@@ -55,25 +55,25 @@
     <header>
       
         <div class="icon"></div>
-        <time datetime="2013-10-12T17:19:09.000Z"><a href="/2013/10/13/new-start/">Oct 13 2013</a></time>
+        <time datetime="2013-10-13T06:35:18.000Z"><a href="/2013/10/13/memcached-使用与简单检测/">Oct 13 2013</a></time>
       
       
   
-    <h1 class="title"><a href="/2013/10/13/new-start/">New Start</a></h1>
+    <h1 class="title"><a href="/2013/10/13/memcached-使用与简单检测/">Memcached 使用与简单监测</a></h1>
   
 
     </header>
     <div class="entry">
       
-        <p>一直以来自己都没有记录的习惯，平常最多在evernote上记录些重要的信息。</p>
-<p>后来读了一篇blog说整理知识的重要性才恍然大悟，一直以来自己都是试图让一门技术快速上手，而记录的很少，等时间一久，很多用过的东西就忘记了。</p>
-<p>比如之前在EMC实习时写过很长时间的python，现在也忘记的七七八八。再加上自己在新的公司入职快6个月，各种新的信息铺面而来，更需要整理和提炼。</p>
-<p>So 自己做了以下几个方面试图补救以前不爱记录，不爱整理的坏习惯。</p>
-<ul>
-<li>整理自己的evernote笔记 (70%)</li>
-<li>建立自己code snippet  (100%)</li>
-<li>在github上建立自己算法练习project (100%)</li>
-</ul>
+        <h2>Introduce</h2>
+<p><a href="http://memcached.org/" target="_blank">Memcached</a>作为一个高并发内存Cached系统被很多大公司使用，最近也一直在用Memcached做项目也积累了一些相关经验。</p>
+<p>本篇博文主要记录Memcached的一些基本使用和简单的Monitor</p>
+<h2>Install</h2>
+<p>Memcached的安装很简单，在Ubuntu下面一行命令搞定。</p>
+<figure class="highlight lang-Shell"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>su<span class="operator"><span class="keyword">do</span> apt-<span class="keyword">get</span> install memcached
+</pre></td></tr></table></figure>
+
 
       
     </div>
@@ -81,7 +81,7 @@
       
         
           <div class="alignleft">
-            <a href="/2013/10/13/new-start/#more" class="more-link">Read More</a>
+            <a href="/2013/10/13/memcached-使用与简单检测/#more" class="more-link">Read More</a>
           </div>
         
         
