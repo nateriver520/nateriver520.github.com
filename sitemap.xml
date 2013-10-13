@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://yoursite.com/about/index.html</loc>
+    <lastmod>2013-10-13T07:47:31.000Z</lastmod>
+  </url>
+  <url>
     <loc>http://yoursite.com/2013/10/13/new-start/</loc>
     <lastmod>2013-10-13T07:29:05.000Z</lastmod>
   </url>
   <url>
     <loc>http://yoursite.com/2013/10/13/memcached-使用与简单检测/</loc>
     <lastmod>2013-10-13T07:27:48.000Z</lastmod>
-  </url>
-  <url>
-    <loc>http://yoursite.com/about/index.html</loc>
-    <lastmod>2013-10-13T03:36:48.000Z</lastmod>
   </url>
 </urlset>
