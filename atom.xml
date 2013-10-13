@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title><![CDATA[Nateriver's Blog]]></title>
+  <subtitle><![CDATA[Learning and Thinking]]></subtitle>
+  <link href="http://yoursite.com/atom.xml" rel="self"/>
+  <link href="http://yoursite.com"/>
+  <updated>2013-10-13T03:24:55.561Z</updated>
+  <id>http://yoursite.com/</id>
+  <author>
+    <name><![CDATA[Shuo Yang]]></name>
+    <email><![CDATA[shuo.yang@yahoo.com]]></email>
+  </author>
+  <generator uri="http://zespia.tw/hexo">Hexo</generator>
+  <entry>
+    <title type="html"><![CDATA[New Start]]></title>
+    <link href="http://yoursite.com/2013/10/13/new-start/"/>
+    <id>http://yoursite.com/2013/10/13/new-start/</id>
+    <published>2013-10-12T17:19:09.000Z</published>
+    <updated>2013-10-12T17:22:01.000Z</updated>
+    <content type="html"><![CDATA[<p>一直以来自己都没有记录的习惯，平常最多在evernote上记录些重要的信息。</p>
+<p>后来读了一篇blog说整理知识的重要性才恍然大悟，一直以来自己都是试图让一门技术快速上手，而记录的很少，等时间一久，很多用过的东西就忘记了。</p>
+<p>比如之前在EMC实习时写过很长时间的python，现在也忘记的七七八八。再加上自己在新的公司入职快6个月，各种新的信息铺面而来，更需要整理和提炼。</p>
+<p>So 自己做了以下几个方面试图补救以前不爱记录，不爱整理的坏习惯。</p>
+<ul>
+<li>整理自己的evernote笔记 (70%)</li>
+<li>建立自己code snippet  (100%)</li>
+<li>在github上建立自己算法练习project (100%)</li>
+</ul>
+<p>接下来的目标是：</p>
+<ul>
+<li>每周整理一次自己的笔记心得</li>
+<li>每个月出一篇blog</li>
+<li>每周写算法</li>
+</ul>
+]]></content>
+    <category scheme="http://yoursite.com/tags/life/" term="life"/>
+  </entry>
+</feed>
