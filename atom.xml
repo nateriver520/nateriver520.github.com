@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Learning and Thinking]]></subtitle>
   <link href="nateriver520.github.io/atom.xml" rel="self"/>
   <link href="nateriver520.github.io"/>
-  <updated>2013-10-18T14:18:54.188Z</updated>
+  <updated>2013-10-18T14:23:16.787Z</updated>
   <id>nateriver520.github.io/</id>
   <author>
     <name><![CDATA[Shuo Yang]]></name>
@@ -12,11 +12,11 @@
   </author>
   <generator uri="http://zespia.tw/hexo">Hexo</generator>
   <entry>
-    <title type="html"><![CDATA[Building A Micro Team]]></title>
+    <title type="html"><![CDATA[Build A Micro Team]]></title>
     <link href="nateriver520.github.io/2013/10/18/building-a-micro-team/"/>
     <id>nateriver520.github.io/2013/10/18/building-a-micro-team/</id>
     <published>2013-10-18T13:03:39.000Z</published>
-    <updated>2013-10-18T14:18:16.000Z</updated>
+    <updated>2013-10-18T14:23:10.000Z</updated>
     <content type="html"><![CDATA[<p>最近这两周一直在忙，忙到忘记回QQ和微信的程度，甚至有两天下班回来直接躺平，虽说忙碌但是也收获了不少。</p>
 <h2>Start</h2>
 <p>说起来有趣，最近在忙的这个项目最初是公司设立的用于工程师在业余时间开发的project，正式参与这个项目时正好是自己所在team的空闲期，并且对他们的team在tech talk介绍过的项目很感兴趣，就联系了他们team的leader，利用下班时间帮他们写项目。</p>
@@ -51,6 +51,7 @@
 <p>无论如何，这次Scrum经历是个非常难得的经历，自己收获颇丰。</p>
 <p>在此感谢下我的team member :) 感谢大家的hard work。</p>
 ]]></content>
+    <category scheme="nateriver520.github.io/tags/Scrum/" term="Scrum"/>
   </entry>
   <entry>
     <title type="html"><![CDATA[Memcached 使用与简单监测]]></title>
