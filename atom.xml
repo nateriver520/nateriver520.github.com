@@ -4,13 +4,54 @@
   <subtitle><![CDATA[Learning and Thinking]]></subtitle>
   <link href="nateriver520.github.io/atom.xml" rel="self"/>
   <link href="nateriver520.github.io"/>
-  <updated>2013-10-15T03:57:08.350Z</updated>
+  <updated>2013-10-18T14:18:54.188Z</updated>
   <id>nateriver520.github.io/</id>
   <author>
     <name><![CDATA[Shuo Yang]]></name>
     <email><![CDATA[shuo.yang@yahoo.com]]></email>
   </author>
   <generator uri="http://zespia.tw/hexo">Hexo</generator>
+  <entry>
+    <title type="html"><![CDATA[Building A Micro Team]]></title>
+    <link href="nateriver520.github.io/2013/10/18/building-a-micro-team/"/>
+    <id>nateriver520.github.io/2013/10/18/building-a-micro-team/</id>
+    <published>2013-10-18T13:03:39.000Z</published>
+    <updated>2013-10-18T14:18:16.000Z</updated>
+    <content type="html"><![CDATA[<p>最近这两周一直在忙，忙到忘记回QQ和微信的程度，甚至有两天下班回来直接躺平，虽说忙碌但是也收获了不少。</p>
+<h2>Start</h2>
+<p>说起来有趣，最近在忙的这个项目最初是公司设立的用于工程师在业余时间开发的project，正式参与这个项目时正好是自己所在team的空闲期，并且对他们的team在tech talk介绍过的项目很感兴趣，就联系了他们team的leader，利用下班时间帮他们写项目。</p>
+<h2>Change</h2>
+<p>最初项目不紧不慢的进行，自己主要集中在业务逻辑方面，前期项目大部分code都是我在维护，直到高层越来越重视，于是项目的进度开始加快，并成立了一个Scrum Team来驱动项目。</p>
+<p>同时我的manager也让我投入更多的时间在这个项目，因此我有大约70%的时间focus在这个项目，由于这是一个新的scrum team，大家之前都没有带领团队经验，所以我们一切从零开始。</p>
+<a id="more"></a>
+
+<h2>Scrum</h2>
+<p>对于新的scrum team, 在我的强烈建议下，我们开始用trello管理tasks，并设定每两周一次的sprint planing。</p>
+<p>但是scrum了两天后，我们发现在project的初期，往往变化非常快，所以每两周的sprint planing根本更不上变化，因此我们决定在每天下午的scrum meeting上，我们会加入一些新的task，并且按照项目的最新进展来重新的分配task。</p>
+<blockquote>
+<p>Project初期，Scrum能够提高团队的工作效率和进度，但是对于具体的操作，团队应当按照项目状况来灵活调节。</p>
+</blockquote>
+<p>而对于daily stand up，团队的成员大多都以简明扼要的方式陈述项目进展和出现的问题，以期最大程度的节省时间。所以每天team 5个成员的update再加上task的re-assign大约20min就能结束。</p>
+<h2>Milestone</h2>
+<p>由于这次项目是自己从初期就参与进来，并到项目的第一次realse。</p>
+<p>是自己看着项目从一个不成熟的project，到有了自己的CI，Tasks，Api，甚至有了dashboard和简单的monitor。</p>
+<p>所以当自己在项目第一次向外push data的时候觉得无比的骄傲，那种感觉可以用我们老大的一句话来形容恰巧不过。</p>
+<blockquote>
+<p>It is like a new baby born by you.   :)</p>
+</blockquote>
+<h2>Keep Learning and Keep Gaining</h2>
+<blockquote>
+<p>你永远不知道你现在做的，以后会对你产生很大的影响。</p>
+</blockquote>
+<p>这是我这次project的另外一个收获。</p>
+<p>随着项目的深入，我在项目的基础上渐渐的有了一个idea。并我在项目realse的这天，我利用早上2小时完成了我第一个专利的demo，在项目realse前的两小时，向公司内部的系统提交了专利申请。</p>
+<p>可以说没有这次项目的参与，自己也很难有这样的idea，更别论到最后专利的提交，</p>
+<p>因此无论最后专利申请是否通过，对自己来说都是不小的收获。</p>
+<h2>Conclusion</h2>
+<p>无论如何，这次Scrum经历是个非常难得的经历，自己收获颇丰。</p>
+<p>在此感谢下我的team member :) 感谢大家的hard work。</p>
+]]></content>
+  </entry>
   <entry>
     <title type="html"><![CDATA[Memcached 使用与简单监测]]></title>
     <link href="nateriver520.github.io/2013/10/13/memcached-使用与简单检测/"/>
