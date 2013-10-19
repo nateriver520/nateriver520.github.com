@@ -2,11 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>nateriver520.github.io/2013/10/19/使用-nodejs-做-function-test/</loc>
-    <lastmod>2013-10-19T07:37:13.000Z</lastmod>
+    <lastmod>2013-10-19T07:44:17.000Z</lastmod>
   </url>
   <url>
     <loc>nateriver520.github.io/2013/10/18/building-a-micro-team/</loc>
-    <lastmod>2013-10-18T14:23:10.000Z</lastmod>
+    <lastmod>2013-10-19T07:44:04.000Z</lastmod>
+  </url>
+  <url>
+    <loc>nateriver520.github.io/2013/10/13/new-start/</loc>
+    <lastmod>2013-10-19T07:43:55.000Z</lastmod>
   </url>
   <url>
     <loc>nateriver520.github.io/2013/10/13/memcached-使用与简单检测/</loc>
@@ -15,9 +19,5 @@
   <url>
     <loc>nateriver520.github.io/about/index.html</loc>
     <lastmod>2013-10-13T07:47:31.000Z</lastmod>
-  </url>
-  <url>
-    <loc>nateriver520.github.io/2013/10/13/new-start/</loc>
-    <lastmod>2013-10-13T07:29:05.000Z</lastmod>
   </url>
 </urlset>
