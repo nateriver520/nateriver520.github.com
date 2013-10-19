@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Learning and Thinking]]></subtitle>
   <link href="nateriver520.github.io/atom.xml" rel="self"/>
   <link href="nateriver520.github.io"/>
-  <updated>2013-10-19T07:44:25.553Z</updated>
+  <updated>2013-10-19T08:52:14.254Z</updated>
   <id>nateriver520.github.io/</id>
   <author>
     <name><![CDATA[Shuo Yang]]></name>
@@ -16,7 +16,7 @@
     <link href="nateriver520.github.io/2013/10/19/使用-nodejs-做-function-test/"/>
     <id>nateriver520.github.io/2013/10/19/使用-nodejs-做-function-test/</id>
     <published>2013-10-19T07:20:48.000Z</published>
-    <updated>2013-10-19T07:44:17.000Z</updated>
+    <updated>2013-10-19T08:51:43.000Z</updated>
     <content type="html"><![CDATA[<h2>Info</h2>
 <p>上周 meeting 上同事说他们现在在用 java 写 function test，产生了很多冗余的代码，整个项目也变得比较臃肿。现在迫切需要个简单的模板项目能快速搭建function test。</p>
 <p>后来我回去想了想，为什么我们非得用 java 来做 function test 呢? </p>
@@ -359,17 +359,17 @@ testosterone
 <p>testosterone 是个蛮不错的项目，作者写的文档简单易懂，在 test 文件夹里面也有很多测试代码。</p>
 <p>本篇 blog 的 sample code 的放在 <a href="https://github.com/nateriver520/function-test-demo" target="_blank"><a href="https://github.com/nateriver520/function-test-demo">https://github.com/nateriver520/function-test-demo</a></a></p>
 ]]></content>
-    <category scheme="nateriver520.github.io/tags/Nodejs/" term="Nodejs"/>
-    <category scheme="nateriver520.github.io/tags/Testosterone/" term="Testosterone"/>
-    <category scheme="nateriver520.github.io/tags/Express/" term="Express"/>
-    <category scheme="nateriver520.github.io/tags/Test/" term="Test"/>
+    <category scheme="nateriver520.github.io/tags/nodejs/" term="nodejs"/>
+    <category scheme="nateriver520.github.io/tags/testosterone/" term="testosterone"/>
+    <category scheme="nateriver520.github.io/tags/express/" term="express"/>
+    <category scheme="nateriver520.github.io/tags/test/" term="test"/>
   </entry>
   <entry>
     <title type="html"><![CDATA[Build A Micro Team]]></title>
     <link href="nateriver520.github.io/2013/10/18/building-a-micro-team/"/>
     <id>nateriver520.github.io/2013/10/18/building-a-micro-team/</id>
     <published>2013-10-18T13:03:39.000Z</published>
-    <updated>2013-10-19T07:44:04.000Z</updated>
+    <updated>2013-10-19T08:52:05.000Z</updated>
     <content type="html"><![CDATA[<p>最近这两周一直在忙，忙到忘记回QQ和微信的程度，甚至有两天下班回来直接躺平，虽说忙碌但是也收获了不少。</p>
 <h2>Start</h2>
 <p>说起来有趣，最近在忙的这个项目最初是公司设立的用于工程师在业余时间开发的project，正式参与这个项目时正好是自己所在team的空闲期，并且对他们的team在tech talk介绍过的项目很感兴趣，就联系了他们team的leader，利用下班时间帮他们写项目。</p>
@@ -532,7 +532,7 @@ testosterone
     <link href="nateriver520.github.io/2013/10/13/new-start/"/>
     <id>nateriver520.github.io/2013/10/13/new-start/</id>
     <published>2013-10-12T17:19:09.000Z</published>
-    <updated>2013-10-19T07:43:55.000Z</updated>
+    <updated>2013-10-19T08:51:48.000Z</updated>
     <content type="html"><![CDATA[<p>一直以来自己都没有记录的习惯，平常最多在evernote上记录些重要的信息。</p>
 <p>后来读了一篇blog说整理知识的重要性才恍然大悟，一直以来自己都是试图让一门技术快速上手，而记录的很少，等时间一久，很多用过的东西就忘记了。</p>
 <p>比如之前在EMC实习时写过很长时间的python，现在也忘记的七七八八。再加上自己在新的公司入职快6个月，各种新的信息铺面而来，更需要整理和提炼。</p>
@@ -551,6 +551,6 @@ testosterone
 <li>每周写算法</li>
 </ul>
 ]]></content>
-    <category scheme="nateriver520.github.io/tags/Life/" term="Life"/>
+    <category scheme="nateriver520.github.io/tags/life/" term="life"/>
   </entry>
 </feed>
