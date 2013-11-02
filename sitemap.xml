@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>nateriver520.github.io/2013/11/02/mac-os-109-软件环境故障排查/</loc>
+    <lastmod>2013-11-02T13:21:55.000Z</lastmod>
+  </url>
+  <url>
+    <loc>nateriver520.github.io/2013/10/13/memcached-使用与简单检测/</loc>
+    <lastmod>2013-10-28T03:46:45.000Z</lastmod>
+  </url>
+  <url>
     <loc>nateriver520.github.io/2013/10/18/building-a-micro-team/</loc>
     <lastmod>2013-10-19T08:52:05.000Z</lastmod>
   </url>
@@ -11,10 +19,6 @@
   <url>
     <loc>nateriver520.github.io/2013/10/19/使用-nodejs-做-function-test/</loc>
     <lastmod>2013-10-19T08:51:43.000Z</lastmod>
-  </url>
-  <url>
-    <loc>nateriver520.github.io/2013/10/13/memcached-使用与简单检测/</loc>
-    <lastmod>2013-10-13T14:25:07.000Z</lastmod>
   </url>
   <url>
     <loc>nateriver520.github.io/about/index.html</loc>

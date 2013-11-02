@@ -4,13 +4,43 @@
   <subtitle><![CDATA[Learning and Thinking]]></subtitle>
   <link href="nateriver520.github.io/atom.xml" rel="self"/>
   <link href="nateriver520.github.io"/>
-  <updated>2013-10-19T08:52:14.254Z</updated>
+  <updated>2013-11-02T13:22:30.721Z</updated>
   <id>nateriver520.github.io/</id>
   <author>
     <name><![CDATA[Shuo Yang]]></name>
     <email><![CDATA[shuo.yang@yahoo.com]]></email>
   </author>
   <generator uri="http://zespia.tw/hexo">Hexo</generator>
+  <entry>
+    <title type="html"><![CDATA[Mac OS 10.9 软件环境故障排查]]></title>
+    <link href="nateriver520.github.io/2013/11/02/mac-os-109-软件环境故障排查/"/>
+    <id>nateriver520.github.io/2013/11/02/mac-os-109-软件环境故障排查/</id>
+    <published>2013-11-02T13:20:08.000Z</published>
+    <updated>2013-11-02T13:21:55.000Z</updated>
+    <content type="html"><![CDATA[<p>之前在10.7上搭配好了一系列的软件环境。</p>
+<p>在升级到10.9后，基本上所有的软件环境都没有了。</p>
+<p>试图通过 brew 安装 mongo db 也编译出错。本篇 blog 就是基于上述问题的一系列排查。</p>
+<a id="more"></a>
+
+<h3>brew</h3>
+<p>首先是查看 brew 是否有问题。</p>
+<figure class="highlight lang-shell"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre><span class="title">brew</span> doctor
+</pre></td></tr></table></figure>
+
+<p>然后按照 brew 列出的各项 warning fix。</p>
+<p>这样的话再装 mongo db 就没问题了。</p>
+<h3>rvm</h3>
+<p>在继续装rvm的时候遇到安装完成后，始终找不到rvm的问题。</p>
+<p>通过echo的方法，发现当前 Terminal 加载的配置位于 <strong><em>/etc/profile</em></strong></p>
+<p>所以一开始 source 一下就好了。</p>
+<p>这样就能成功的找到 rvm</p>
+<h3>参考</h3>
+<p><a href="http://www.interworks.com/blogs/ckaukis/2013/03/05/installing-ruby-200-rvm-and-homebrew-mac-os-x-108-mountain-lion" target="_blank">Installing Ruby 2.0.0 with RVM and Homebrew on Mac OS X 10.8 Mountain Lion</a></p>
+<p><a href="http://railsapps.github.io/installrubyonrails-mac.html" target="_blank">Install Ruby on Rails · Mac OS X Mavericks</a></p>
+]]></content>
+    <category scheme="nateriver520.github.io/tags/macos/" term="macos"/>
+  </entry>
   <entry>
     <title type="html"><![CDATA[使用 Node.js 做 Function Test]]></title>
     <link href="nateriver520.github.io/2013/10/19/使用-nodejs-做-function-test/"/>
@@ -411,7 +441,7 @@ testosterone
     <link href="nateriver520.github.io/2013/10/13/memcached-使用与简单检测/"/>
     <id>nateriver520.github.io/2013/10/13/memcached-使用与简单检测/</id>
     <published>2013-10-13T06:35:18.000Z</published>
-    <updated>2013-10-13T14:25:07.000Z</updated>
+    <updated>2013-10-28T03:46:45.000Z</updated>
     <content type="html"><![CDATA[<h2>Introduce</h2>
 <p><a href="http://memcached.org/" target="_blank">Memcached</a>作为一个高并发内存Cached系统被很多大公司使用，最近也一直在用Memcached做项目也积累了一些相关经验。</p>
 <p>本篇博文主要记录Memcached的一些基本使用和简单的Monitor</p>
