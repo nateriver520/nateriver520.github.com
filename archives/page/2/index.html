@@ -5,17 +5,13 @@
   <meta name="google-site-verification" content="ZLbDyagJibV84TSODwr4oPmwcq_W0Cn06VfckCzDMVU" />
   <meta name="baidu-site-verification" content="ayZ0Oj89Av" />  
   
-  <title>Mac OS 10.9 软件环境故障排查 | Nateriver's Blog</title>
+  <title>Page 2 | Archives | Nateriver's Blog</title>
   <meta name="author" content="Shuo Yang">
-  
-  <meta name="description" content="之前在10.7上搭配好了一系列的软件环境。
-在升级到10.9后，基本上所有的软件环境都没有了。
-试图通过 brew 安装 mongo db 也编译出错。本篇 blog 就是基于上述问题的一系列排查。">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="Mac OS 10.9 软件环境故障排查"/>
+  
   <meta property="og:site_name" content="Nateriver's Blog"/>
 
   
@@ -50,73 +46,47 @@
 </nav>
 <div class="clearfix"></div></header>
   <div id="content" class="inner">
-    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+    <div id="main-col" class="alignleft"><div id="wrapper">
+<h2 class="archive-title">Archives</h2>
+
+
+  
+    <article class="post">
   
   <div class="post-content">
     <header>
       
         <div class="icon"></div>
-        <time datetime="2013-11-02T13:20:08.000Z"><a href="/2013/11/02/mac-os-109-软件环境故障排查/">Nov 2 2013</a></time>
+        <time datetime="2013-10-12T17:19:09.000Z"><a href="/2013/10/13/new-start/">Oct 13 2013</a></time>
       
       
   
-    <h1 class="title">Mac OS 10.9 软件环境故障排查</h1>
+    <h1 class="title"><a href="/2013/10/13/new-start/">New Start</a></h1>
   
 
     </header>
     <div class="entry">
       
-        <p>之前在10.7上搭配好了一系列的软件环境。</p>
-<p>在升级到10.9后，基本上所有的软件环境都没有了。</p>
-<p>试图通过 brew 安装 mongo db 也编译出错。本篇 blog 就是基于上述问题的一系列排查。</p>
-<a id="more"></a>
-
-<h3>brew</h3>
-<p>首先是查看 brew 是否有问题。</p>
-<figure class="highlight lang-shell"><table><tr><td class="gutter"><pre>1
-</pre></td><td class="code"><pre><span class="title">brew</span> doctor
-</pre></td></tr></table></figure>
-
-<p>然后按照 brew 列出的各项 warning fix。</p>
-<p>这样的话再装 mongo db 就没问题了。</p>
-<h3>rvm</h3>
-<p>在继续装rvm的时候遇到安装完成后，始终找不到rvm的问题。</p>
-<p>通过echo的方法，发现当前 Terminal 加载的配置位于 <strong><em>/etc/profile</em></strong></p>
-<p>所以一开始 source 一下就好了。</p>
-<p>这样就能成功的找到 rvm</p>
-<h3>参考</h3>
-<p><a href="http://www.interworks.com/blogs/ckaukis/2013/03/05/installing-ruby-200-rvm-and-homebrew-mac-os-x-108-mountain-lion" target="_blank">Installing Ruby 2.0.0 with RVM and Homebrew on Mac OS X 10.8 Mountain Lion</a></p>
-<p><a href="http://railsapps.github.io/installrubyonrails-mac.html" target="_blank">Install Ruby on Rails · Mac OS X Mavericks</a></p>
+        <p>一直以来自己都没有记录的习惯，平常最多在evernote上记录些重要的信息。</p>
+<p>后来读了一篇blog说整理知识的重要性才恍然大悟，一直以来自己都是试图让一门技术快速上手，而记录的很少，等时间一久，很多用过的东西就忘记了。</p>
+<p>比如之前在EMC实习时写过很长时间的python，现在也忘记的七七八八。再加上自己在新的公司入职快6个月，各种新的信息铺面而来，更需要整理和提炼。</p>
+<p>So 自己做了以下几个方面试图补救以前不爱记录，不爱整理的坏习惯。</p>
+<ul>
+<li>整理自己的evernote笔记 (70%)</li>
+<li>建立自己code snippet  (100%)</li>
+<li>在github上建立自己算法练习project (100%)</li>
+</ul>
 
       
     </div>
     <footer>
       
         
+          <div class="alignleft">
+            <a href="/2013/10/13/new-start/#more" class="more-link">Read More</a>
+          </div>
         
-  
-  <div class="tags">
-    <a href="/tags/macos/">macos</a>
-  </div>
-
         
-  <div class="addthis addthis_toolbox addthis_default_style">
-    
-      <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
-    
-    
-      <a class="addthis_button_tweet"></a>
-    
-    
-      <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
-    
-    
-      <a class="addthis_button_pinterest_pinit" pi:pinit:layout="horizontal"></a>
-    
-    <a class="addthis_counter addthis_pill_style"></a>
-  </div>
-  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js"></script>
-
       
       <div class="clearfix"></div>
     </footer>
@@ -124,22 +94,15 @@
 </article>
 
 
-<section id="comment">
-<!-- Duoshuo Comment BEGIN -->
-  <div class="ds-thread"></div>
-<script type="text/javascript">
-var duoshuoQuery = {short_name:"nateriver520"};
-  (function() {
-    var ds = document.createElement('script');
-    ds.type = 'text/javascript';ds.async = true;
-    ds.src = 'http://static.duoshuo.com/embed.js';
-    ds.charset = 'UTF-8';
-    (document.getElementsByTagName('head')[0] 
-    || document.getElementsByTagName('body')[0]).appendChild(ds);
-  })();
-  </script>
-<!-- Duoshuo Comment END -->
-</section>
+  
+
+  <nav id="pagination">
+  
+    <a href="/archives/" class="alignleft prev">Prev</a>
+  
+  
+  <div class="clearfix"></div>
+</nav>
 </div></div>
     <aside id="sidebar" class="alignright">
   <div class="search">

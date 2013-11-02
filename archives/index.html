@@ -57,6 +57,370 @@
     <header>
       
         <div class="icon"></div>
+        <time datetime="2013-11-02T15:46:58.000Z"><a href="/2013/11/02/用express搭建-blog-(一)/">Nov 2 2013</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2013/11/02/用express搭建-blog-(一)/">用Express搭建 blog (一)</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <h2>Info</h2>
+<p>公司马上要举行 hack day 了，这次决定和小伙伴用 Express 作为框架来搭建我们的应用，所以昨天搭出来UI后，今天开始系统的学习下 Express。</p>
+<h2>Start</h2>
+<p>首先是express的全局设置。</p>
+<figure class="highlight lang-shell"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>su<span class="operator"><span class="keyword">do</span> npm install -g express
+</pre></td></tr></table></figure>
+
+<p>接着我们试着用express搭建一个简单的blog程序<br>在work path 运行命令</p>
+<figure class="highlight lang-shell"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre><span class="title">express</span> -e ejs blog
+</pre></td></tr></table></figure>
+
+<p>可以看到express已经帮你创建了一系列的模板程序。接着进入blog目录安装ejs等相关依赖。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre><span class="title">cd</span> blog && npm install
+</pre></td></tr></table></figure>
+
+<p>运行</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre><span class="title">node</span> app
+</pre></td></tr></table></figure>
+
+<p>并访问<a href="http://localhost:3000/" target="_blank">http://localhost:3000/</a> ,简单的hello world 程序已经生成。</p>
+<p>下面来看下程序的整个结构，运行command</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre><span class="title">tree</span> -I  node*
+</pre></td></tr></table></figure>
+
+<p>express的模板程序结构看起来和rails的结构很相像。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+</pre></td><td class="code"><pre>├── app<span class="variable">.js</span>
+├── package<span class="variable">.json</span>
+├── <span class="keyword">public</span>
+│   ├── images
+│   ├── javascripts
+│   └── stylesheets
+│       └── style<span class="variable">.css</span>
+├── routes
+│   ├── index<span class="variable">.js</span>
+│   └── user<span class="variable">.js</span>
+└── views
+    └── index<span class="variable">.ejs</span>
+</pre></td></tr></table></figure>
+
+<h2>Blog Design</h2>
+<p>对express的模板程序有了基本概念后，我们开始来实现一个稍微复杂的blog。<br>blog 需要实现下面的功能。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+</pre></td><td class="code"><pre>/：首页
+/login：登录
+/reg：注册
+/post：发表文章
+/logout：登出
+</pre></td></tr></table></figure>
+
+<p>blog 的数据存储采用mongodb。</p>
+<h2>Improve</h2>
+<p>首先我门先简单的改进下我们当前的blog程序。</p>
+<p>首先是重现默认的路由，在 <strong><em>app.js</em></strong> 里面我们可以看到以下两行语句。</p>
+<figure class="highlight lang-javascript"><table><tr><td class="gutter"><pre>1
+2
+</pre></td><td class="code"><pre>app.get(<span class="string">'/'</span>, routes.index);
+app.get(<span class="string">'/users'</span>, user.list);
+</pre></td></tr></table></figure>
+
+<p>我们把这部分代码移到 <strong><em>routes/index.js</em></strong> 使代码结构看起来更为清晰。</p>
+<figure class="highlight lang-js"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+</pre></td><td class="code"><pre>module.exports = <span class="keyword">function</span>(app){    
+    app.get(<span class="string">'/'</span>,<span class="keyword">function</span>(req,res){
+        res.render(<span class="string">'index'</span>, { title: <span class="string">'主页'</span> });
+    });
+    app.get(<span class="string">'/reg'</span>,<span class="keyword">function</span>(req,res){
+        res.render(<span class="string">'reg'</span>, { title: <span class="string">'注册'</span> });
+    });
+    app.post(<span class="string">'/reg'</span>,<span class="keyword">function</span>(req,res){
+    });
+    app.get(<span class="string">'/login'</span>,<span class="keyword">function</span>(req,res){
+        res.render(<span class="string">'login'</span>, { title: <span class="string">'登录'</span> });
+    });
+    app.post(<span class="string">'/login'</span>,<span class="keyword">function</span>(req,res){
+    });
+    app.get(<span class="string">'/logout'</span>,<span class="keyword">function</span>(req,res){
+    });
+    app.get(<span class="string">'/post'</span>,<span class="keyword">function</span>(req,res){
+        res.render(<span class="string">'post'</span>, { title: <span class="string">'发表'</span> });
+    });
+    app.post(<span class="string">'/post'</span>,<span class="keyword">function</span>(req,res){
+    }); 
+};
+</pre></td></tr></table></figure>
+
+<p>同时在 <strong><em>app.js</em></strong>里将上面两行代码替换成。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre><span class="function"><span class="title">routes</span><span class="params">(app)</span>;
+</pre></td></tr></table></figure>
+
+<p>Ok,接下来我们改进前端界面，实现后的前端界面结构应该如图所示。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+</pre></td><td class="code"><pre>└── views
+    ├── footer<span class="variable">.ejs</span>
+    ├── header<span class="variable">.ejs</span>
+    ├── index<span class="variable">.ejs</span>
+    ├── login<span class="variable">.ejs</span>
+    └── reg<span class="variable">.ejs</span>
+</pre></td></tr></table></figure>
+
+<p><strong><em>footer.ejs</em></strong></p>
+<figure class="highlight lang-html"><table><tr><td class="gutter"><pre>1
+2
+3
+</pre></td><td class="code"><pre><span class="tag">&lt;/<span class="title">article</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">body</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">html</span>&gt;</span>
+</pre></td></tr></table></figure>
+
+<p><strong><em>header.ejs</em></strong></p>
+<figure class="highlight lang-html"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+</pre></td><td class="code"><pre><span class="doctype">&lt;!DOCTYPE html&gt;</span>
+<span class="tag">&lt;<span class="title">html</span>&gt;</span>
+<span class="tag">&lt;<span class="title">head</span>&gt;</span>
+<span class="tag">&lt;<span class="title">meta</span> <span class="attribute">http-equiv</span>=<span class="value">"Content-Type"</span> <span class="attribute">content</span>=<span class="value">"text/html; charset=UTF-8"</span>&gt;</span>
+<span class="tag">&lt;<span class="title">title</span>&gt;</span>Blog<span class="tag">&lt;/<span class="title">title</span>&gt;</span>
+<span class="tag">&lt;<span class="title">link</span> <span class="attribute">rel</span>=<span class="value">"stylesheet"</span> <span class="attribute">href</span>=<span class="value">"stylesheets/style.css"</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">head</span>&gt;</span>
+<span class="tag">&lt;<span class="title">body</span>&gt;</span>
+
+<span class="tag">&lt;<span class="title">header</span>&gt;</span>
+<span class="tag">&lt;<span class="title">h1</span>&gt;</span><span class="vbscript">&lt;%= title %&gt;</span><span class="tag">&lt;/<span class="title">h1</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">header</span>&gt;</span>
+
+<span class="tag">&lt;<span class="title">nav</span>&gt;</span>
+<span class="tag">&lt;<span class="title">span</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">title</span>=<span class="value">"主页"</span> <span class="attribute">href</span>=<span class="value">"/"</span>&gt;</span>home<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span>
+<span class="tag">&lt;<span class="title">span</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">title</span>=<span class="value">"登录"</span> <span class="attribute">href</span>=<span class="value">"/login"</span>&gt;</span>login<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span>
+<span class="tag">&lt;<span class="title">span</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">title</span>=<span class="value">"注册"</span> <span class="attribute">href</span>=<span class="value">"/reg"</span>&gt;</span>register<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">nav</span>&gt;</span>
+<span class="tag">&lt;<span class="title">article</span>&gt;</span>
+</pre></td></tr></table></figure>
+
+<p><strong><em>index.ejs</em></strong></p>
+<figure class="highlight lang-html"><table><tr><td class="gutter"><pre>1
+2
+3
+</pre></td><td class="code"><pre><span class="vbscript">&lt;%- include header %&gt;</span>
+这是主页
+<span class="vbscript">&lt;%- include footer %&gt;</span>
+</pre></td></tr></table></figure>
+
+<p><strong><em>login.ejs</em></strong></p>
+<figure class="highlight lang-html"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="code"><pre><span class="vbscript">&lt;%- include header %&gt;</span>
+<span class="tag">&lt;<span class="title">form</span> <span class="attribute">method</span>=<span class="value">"post"</span>&gt;</span>
+用户名：<span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"text"</span> <span class="attribute">name</span>=<span class="value">"username"</span> /&gt;</span><span class="tag">&lt;<span class="title">br</span> /&gt;</span>
+密码：   <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"password"</span> <span class="attribute">name</span>=<span class="value">"password"</span> /&gt;</span><span class="tag">&lt;<span class="title">br</span> /&gt;</span>
+        <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"submit"</span> <span class="attribute">value</span>=<span class="value">"登录"</span> /&gt;</span>
+<span class="tag">&lt;/<span class="title">form</span>&gt;</span>
+<span class="vbscript">&lt;%- include footer %&gt;</span>
+</pre></td></tr></table></figure>
+
+<p><strong><em>reg.ejs</em></strong></p>
+<figure class="highlight lang-html"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="code"><pre><span class="vbscript">&lt;%- include header %&gt;</span>
+<span class="tag">&lt;<span class="title">form</span> <span class="attribute">method</span>=<span class="value">"post"</span>&gt;</span>
+用户名：<span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"text"</span> <span class="attribute">name</span>=<span class="value">"username"</span> /&gt;</span><span class="tag">&lt;<span class="title">br</span> /&gt;</span>
+密码：    <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"password"</span> <span class="attribute">name</span>=<span class="value">"password"</span> /&gt;</span><span class="tag">&lt;<span class="title">br</span> /&gt;</span>
+确认密码：<span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"password"</span> <span class="attribute">name</span>=<span class="value">"password-repeat"</span> /&gt;</span><span class="tag">&lt;<span class="title">br</span> /&gt;</span>
+        <span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"submit"</span> <span class="attribute">value</span>=<span class="value">"注册"</span> /&gt;</span>
+<span class="tag">&lt;/<span class="title">form</span>&gt;</span>
+<span class="vbscript">&lt;%- include footer %&gt;</span>
+</pre></td></tr></table></figure>
+
+<p>上面所做的工作简单的概括来说就是把整个 blog 的 app 的 header 和 footer 分离开。并按照生成对应的登陆，注册页面。</p>
+<p>可以通过访问<a href="http://localhost:3000/" target="_blank">http://localhost:3000/</a> 来查看当前主页。</p>
+<h2>mongo db</h2>
+<p>首先是安装。mac下安装mongodb很简单。</p>
+<figure class="highlight lang-shell"><table><tr><td class="gutter"><pre>1
+2
+</pre></td><td class="code"><pre><span class="title">brew</span> update
+<span class="title">brew</span> install mongodb
+</pre></td></tr></table></figure>
+
+<p>测试</p>
+<figure class="highlight lang-shell"><table><tr><td class="gutter"><pre>1
+2
+3
+</pre></td><td class="code"><pre>mongo
+&gt; <span class="transposed_variable">db.</span><span class="transposed_variable">test.</span>save(<span class="cell">{a:<span class="number">1</span>}</span>)
+&gt; <span class="transposed_variable">db.</span><span class="transposed_variable">test.</span><span class="built_in">find</span>()
+</pre></td></tr></table></figure>
+
+<p>mongo db装上后 开始安装node js的依赖。</p>
+<p>在 <strong><em>package.json</em></strong> 中加入。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+</pre></td><td class="code"><pre><span class="string">"mongodb"</span>:<span class="string">"<span class="variable">*"</span>,
+"</span><span class="keyword">connect</span>-mongo<span class="string">":"</span><span class="variable">*"</span>
+</pre></td></tr></table></figure>
+
+<p>运行</p>
+<figure class="highlight lang-shell"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre><span class="title">npm</span> install
+</pre></td></tr></table></figure>
+
+<p>运行完成后，我们就能够在程序中对mongo db进行操作了。</p>
+<p>我们在blog下面新建 <strong><em>settings.js</em></strong> 用来存储我们blog程序的相关配置。</p>
+<figure class="highlight lang-javascript"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+</pre></td><td class="code"><pre>module.exports = { 
+  cookieSecret: <span class="string">'myblog'</span>, 
+  db: <span class="string">'blog'</span>, 
+  host: <span class="string">'localhost'</span>
+};
+</pre></td></tr></table></figure>
+
+<p>创建 <strong><em>models</em></strong> 目录，创建 <strong><em>db.js</em></strong> 用来操作 db</p>
+<figure class="highlight lang-javascript"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+</pre></td><td class="code"><pre><span class="keyword">var</span> settings = require(<span class="string">'../settings'</span>),
+    Db = require(<span class="string">'mongodb'</span>).Db,
+    Connection = require(<span class="string">'mongodb'</span>).Connection,
+    Server = require(<span class="string">'mongodb'</span>).Server;
+module.exports = <span class="keyword">new</span> Db(settings.db, <span class="keyword">new</span> Server(settings.host, Connection.DEFAULT_PORT, {}));
+</pre></td></tr></table></figure>
+
+<p>而Package <strong><em>connect-mongo</em></strong> 是用来存储会话信息到数据库。</p>
+<p>保存回话信息到数据库。</p>
+<p>然后在 <strong><em>app.js</em></strong> 中添加。</p>
+<figure class="highlight lang-javascript"><table><tr><td class="gutter"><pre>1
+2
+</pre></td><td class="code"><pre><span class="keyword">var</span> MongoStore = require(<span class="string">'connect-mongo'</span>)(express);
+<span class="keyword">var</span> settings = require(<span class="string">'./settings'</span>);
+</pre></td></tr></table></figure>
+
+<p>同时在 <strong><em>app.use(express.methodOverride())</em></strong> 后面添加</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="code"><pre>app<span class="preprocessor">.use</span>(express<span class="preprocessor">.cookieParser</span>())<span class="comment">;</span>
+app<span class="preprocessor">.use</span>(express<span class="preprocessor">.session</span>({ 
+      secret: settings<span class="preprocessor">.cookieSecret</span>, 
+      store: new MongoStore({ 
+      db: settings<span class="preprocessor">.db</span> 
+   }) 
+}))<span class="comment">;</span>
+</pre></td></tr></table></figure>
+
+<p>其中 express.cookieParser() 是 Cookie 解析的中间件。express.session() 则提供会话支持，设置它的 store 参数为 MongoStore 实例，把会话信息存储到数据库中，以避免丢失。<br>在后面的小节中，我们可以通过 req.session 获取当前用户的会话对象，以维护用户相关的信息。”<br>至此，数据库的配置工作完成了，后面我们就可以用数据库了。</p>
+<h2>结论</h2>
+<p>Express的代码结构看起来还是蛮清晰的，各种第三方的类库资源也很丰富。</p>
+<p>由于本人是Express的初学者，所以整个 blog 的程序设计是基本是完全参考 <a href="http://cnodejs.org/topic/515b00096d382773061927de" target="_blank">【一起学node.js （一）】用node+express搭建多人博客</a> 这篇blog的内容，在此也感谢下原作者。</p>
+<h2>参考</h2>
+<p><a href="http://cnodejs.org/topic/515b00096d382773061927de" target="_blank">【一起学node.js （一）】用node+express搭建多人博客</a></p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+  
+    <article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
         <time datetime="2013-11-02T13:20:08.000Z"><a href="/2013/11/02/mac-os-109-软件环境故障排查/">Nov 2 2013</a></time>
       
       
@@ -213,53 +577,11 @@
 
 
   
-    <article class="post">
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2013-10-12T17:19:09.000Z"><a href="/2013/10/13/new-start/">Oct 13 2013</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/2013/10/13/new-start/">New Start</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <p>一直以来自己都没有记录的习惯，平常最多在evernote上记录些重要的信息。</p>
-<p>后来读了一篇blog说整理知识的重要性才恍然大悟，一直以来自己都是试图让一门技术快速上手，而记录的很少，等时间一久，很多用过的东西就忘记了。</p>
-<p>比如之前在EMC实习时写过很长时间的python，现在也忘记的七七八八。再加上自己在新的公司入职快6个月，各种新的信息铺面而来，更需要整理和提炼。</p>
-<p>So 自己做了以下几个方面试图补救以前不爱记录，不爱整理的坏习惯。</p>
-<ul>
-<li>整理自己的evernote笔记 (70%)</li>
-<li>建立自己code snippet  (100%)</li>
-<li>在github上建立自己算法练习project (100%)</li>
-</ul>
-
-      
-    </div>
-    <footer>
-      
-        
-          <div class="alignleft">
-            <a href="/2013/10/13/new-start/#more" class="more-link">Read More</a>
-          </div>
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-  
 
   <nav id="pagination">
   
+  
+    <a href="/archives/page/2/" class="alignright next">Next</a>
   
   <div class="clearfix"></div>
 </nav>
@@ -278,7 +600,7 @@
 <div class="widget tagcloud">
   <h3 class="title">Tag Cloud</h3>
   <div class="entry">
-    <a href="/tags/Java/" style="font-size: NaNpx;">Java</a><a href="/tags/Memcached/" style="font-size: NaNpx;">Memcached</a><a href="/tags/Scrum/" style="font-size: NaNpx;">Scrum</a><a href="/tags/express/" style="font-size: NaNpx;">express</a><a href="/tags/life/" style="font-size: NaNpx;">life</a><a href="/tags/macos/" style="font-size: NaNpx;">macos</a><a href="/tags/nodejs/" style="font-size: NaNpx;">nodejs</a><a href="/tags/test/" style="font-size: NaNpx;">test</a><a href="/tags/testosterone/" style="font-size: NaNpx;">testosterone</a>
+    <a href="/tags/Java/" style="font-size: 10.00px;">Java</a><a href="/tags/Memcached/" style="font-size: 10.00px;">Memcached</a><a href="/tags/Scrum/" style="font-size: 10.00px;">Scrum</a><a href="/tags/express/" style="font-size: 20.00px;">express</a><a href="/tags/life/" style="font-size: 10.00px;">life</a><a href="/tags/macos/" style="font-size: 10.00px;">macos</a><a href="/tags/nodejs/" style="font-size: 20.00px;">nodejs</a><a href="/tags/test/" style="font-size: 10.00px;">test</a><a href="/tags/testosterone/" style="font-size: 10.00px;">testosterone</a>
   </div>
 </div>
 
