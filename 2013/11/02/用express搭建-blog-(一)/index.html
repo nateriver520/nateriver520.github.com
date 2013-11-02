@@ -163,7 +163,8 @@ node app
 <p>blog 的数据存储采用mongodb。</p>
 <h2>Improve</h2>
 <p>首先我门先简单的改进下我们当前的blog程序。</p>
-<p>首先是重现默认的路由，在 <strong><em>app.js</em></strong> 里面我们可以看到以下两行语句。</p>
+<p>首先是重写默认的路由</p>
+<p>在 <strong><em>app.js</em></strong> 里面我们可以看到以下两行语句。</p>
 <figure class="highlight lang-javascript"><table><tr><td class="gutter"><pre>1
 2
 </pre></td><td class="code"><pre>app.get(<span class="string">'/'</span>, routes.index);
@@ -222,7 +223,7 @@ app.get(<span class="string">'/users'</span>, user.list);
 </pre></td><td class="code"><pre><span class="function"><span class="title">routes</span><span class="params">(app)</span>;
 </pre></td></tr></table></figure>
 
-<p>Ok,接下来我们改进前端界面，实现后的前端界面结构应该如图所示。</p>
+<p>Ok,接下来我们添加相应的ejs，实现后的前端界面结构应该如图所示。</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre>1
 2
 3
@@ -332,7 +333,7 @@ app.get(<span class="string">'/users'</span>, user.list);
 <span class="vbscript">&lt;%- include footer %&gt;</span>
 </pre></td></tr></table></figure>
 
-<p>上面所做的工作简单的概括来说就是把整个 blog 的 app 的 header 和 footer 分离开。并按照生成对应的登陆，注册页面。</p>
+<p>上面所做的工作简单的概括来说就是把整个 blog 的  header 和 footer 分离开，并按此建立相应的登陆，注册页面。</p>
 <p>可以通过访问<a href="http://localhost:3000/" target="_blank">http://localhost:3000/</a> 来查看当前主页。</p>
 <h2>mongo db</h2>
 <p>首先是安装。mac下安装mongodb很简单。</p>
@@ -364,7 +365,7 @@ app.get(<span class="string">'/users'</span>, user.list);
 </pre></td><td class="code"><pre><span class="title">npm</span> install
 </pre></td></tr></table></figure>
 
-<p>运行完成后，我们就能够在程序中对mongo db进行操作了。</p>
+<p>安装完成后，我们就能够在程序中对mongo db进行操作了。</p>
 <p>我们在blog下面新建 <strong><em>settings.js</em></strong> 用来存储我们blog程序的相关配置。</p>
 <figure class="highlight lang-javascript"><table><tr><td class="gutter"><pre>1
 2
@@ -378,7 +379,7 @@ app.get(<span class="string">'/users'</span>, user.list);
 };
 </pre></td></tr></table></figure>
 
-<p>创建 <strong><em>models</em></strong> 目录，创建 <strong><em>db.js</em></strong> 用来操作 db</p>
+<p>创建 <strong><em>models</em></strong> 目录并新建 js 文件 <strong><em>db.js</em></strong> 用来操作 db</p>
 <figure class="highlight lang-javascript"><table><tr><td class="gutter"><pre>1
 2
 3
@@ -392,8 +393,7 @@ module.exports = <span class="keyword">new</span> Db(settings.db, <span class="k
 </pre></td></tr></table></figure>
 
 <p>而Package <strong><em>connect-mongo</em></strong> 是用来存储会话信息到数据库。</p>
-<p>保存回话信息到数据库。</p>
-<p>然后在 <strong><em>app.js</em></strong> 中添加。</p>
+<p>在 <strong><em>app.js</em></strong> 中添加。</p>
 <figure class="highlight lang-javascript"><table><tr><td class="gutter"><pre>1
 2
 </pre></td><td class="code"><pre><span class="keyword">var</span> MongoStore = require(<span class="string">'connect-mongo'</span>)(express);
@@ -419,8 +419,8 @@ app<span class="preprocessor">.use</span>(express<span class="preprocessor">.ses
 
 <p>其中 express.cookieParser() 是 Cookie 解析的中间件。express.session() 则提供会话支持，设置它的 store 参数为 MongoStore 实例，把会话信息存储到数据库中，以避免丢失。<br>在后面的小节中，我们可以通过 req.session 获取当前用户的会话对象，以维护用户相关的信息。”<br>至此，数据库的配置工作完成了，后面我们就可以用数据库了。</p>
 <h2>结论</h2>
-<p>Express的代码结构看起来还是蛮清晰的，各种第三方的类库资源也很丰富。</p>
-<p>由于本人是Express的初学者，所以整个 blog 的程序设计是基本是完全参考 <a href="http://cnodejs.org/topic/515b00096d382773061927de" target="_blank">【一起学node.js （一）】用node+express搭建多人博客</a> 这篇blog的内容，在此也感谢下原作者。</p>
+<p>Express的代码结构看起来还是蛮清晰的，npm上的第三方的资源也很丰富。</p>
+<p>由于本人是Express的初学者，所以整个 blog 的过程也是完全参考 <a href="http://cnodejs.org/topic/515b00096d382773061927de" target="_blank">【一起学node.js （一）】用node+express搭建多人博客</a> 这篇blog的内容，在此也感谢下原作者。</p>
 <h2>参考</h2>
 <p><a href="http://cnodejs.org/topic/515b00096d382773061927de" target="_blank">【一起学node.js （一）】用node+express搭建多人博客</a></p>
 
