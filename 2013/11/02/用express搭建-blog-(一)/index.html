@@ -16,7 +16,22 @@ Start
 sudo npm install -g express
 
 
-接着我们试着用ex">
+接着我们试着用express搭建一个简单的blog程序在work path 运行命令
+1
+express -e ejs blog
+
+
+可以看到express已经帮你创建了一系列的模板程序。接着进入blog目录安装ejs等相关依赖。
+1
+cd blog &amp;&amp; npm install
+
+
+运行
+1
+node app
+
+
+并访问http://localhost:3000/ ,简单的hello world 程序已经生成。">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -96,6 +111,9 @@ sudo npm install -g express
 </pre></td></tr></table></figure>
 
 <p>并访问<a href="http://localhost:3000/" target="_blank">http://localhost:3000/</a> ,简单的hello world 程序已经生成。</p>
+<a id="more"></a>
+
+
 <p>下面来看下程序的整个结构，运行command</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre>1
 </pre></td><td class="code"><pre><span class="title">tree</span> -I  node*
