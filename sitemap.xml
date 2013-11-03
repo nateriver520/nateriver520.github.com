@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>nateriver520.github.io/2013/10/18/building-a-micro-team/</loc>
+    <lastmod>2013-11-03T04:05:18.000Z</lastmod>
+  </url>
+  <url>
     <loc>nateriver520.github.io/2013/11/03/永远不要放弃做梦的权利/</loc>
     <lastmod>2013-11-02T16:41:08.000Z</lastmod>
   </url>
@@ -19,10 +23,6 @@
   <url>
     <loc>nateriver520.github.io/2013/10/13/memcached-使用与简单检测/</loc>
     <lastmod>2013-10-28T03:46:45.000Z</lastmod>
-  </url>
-  <url>
-    <loc>nateriver520.github.io/2013/10/18/building-a-micro-team/</loc>
-    <lastmod>2013-10-19T08:52:05.000Z</lastmod>
   </url>
   <url>
     <loc>nateriver520.github.io/2013/10/13/new-start/</loc>
