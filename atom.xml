@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Learning and Thinking]]></subtitle>
   <link href="nateriver520.github.io/atom.xml" rel="self"/>
   <link href="nateriver520.github.io"/>
-  <updated>2013-11-06T06:26:41.845Z</updated>
+  <updated>2013-11-06T06:53:28.149Z</updated>
   <id>nateriver520.github.io/</id>
   <author>
     <name><![CDATA[Shuo Yang]]></name>
@@ -16,7 +16,7 @@
     <link href="nateriver520.github.io/2013/11/06/thrift入门-(一)/"/>
     <id>nateriver520.github.io/2013/11/06/thrift入门-(一)/</id>
     <published>2013-11-06T06:22:06.000Z</published>
-    <updated>2013-11-06T06:26:38.000Z</updated>
+    <updated>2013-11-06T06:53:17.000Z</updated>
     <content type="html"><![CDATA[<h2>Install</h2>
 <p>Go to <a href="http://thrift.apache.org/download/" target="_blank">thrift</a> page download thrift.</p>
 <figure class="highlight lang-shell"><table><tr><td class="gutter"><pre>1
@@ -286,6 +286,9 @@
 </pre></td><td class="code"><pre>I am <span class="keyword">server</span>, I want to say:  Hello I am <span class="keyword">client</span>
 </pre></td></tr></table></figure>
 
+<h2>Reference</h2>
+<p><a href="http://roclinux.cn/?p=3316" target="_blank">Linux大棚版Thrift入门教程</a></p>
+<p><a href="http://www.cnblogs.com/johnc/archive/2011/06/19/2084508.html" target="_blank">Thrift java服务器与客户端示例</a></p>
 ]]></content>
     <category scheme="nateriver520.github.io/tags/thrift/" term="thrift"/>
     <category scheme="nateriver520.github.io/tags/maven/" term="maven"/>
