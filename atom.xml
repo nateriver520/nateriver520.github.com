@@ -4,13 +4,399 @@
   <subtitle><![CDATA[Learning and Thinking]]></subtitle>
   <link href="nateriver520.github.io/atom.xml" rel="self"/>
   <link href="nateriver520.github.io"/>
-  <updated>2013-11-06T06:53:28.149Z</updated>
+  <updated>2013-11-10T06:02:15.702Z</updated>
   <id>nateriver520.github.io/</id>
   <author>
     <name><![CDATA[Shuo Yang]]></name>
     <email><![CDATA[shuo.yang@yahoo.com]]></email>
   </author>
   <generator uri="http://zespia.tw/hexo">Hexo</generator>
+  <entry>
+    <title type="html"><![CDATA[jing js (二)]]></title>
+    <link href="nateriver520.github.io/2013/11/10/jing-js-(二)/"/>
+    <id>nateriver520.github.io/2013/11/10/jing-js-(二)/</id>
+    <published>2013-11-10T01:34:05.000Z</published>
+    <updated>2013-11-10T06:01:07.000Z</updated>
+    <content type="html"><![CDATA[<h2>Javascript Engine</h2>
+<h3>Parser</h3>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>  <span class="literal">-</span> <span class="comment">Usually</span> <span class="comment">generates</span> <span class="comment">AST
+</pre></td></tr></table></figure>
+
+<h3>Runtime</h3>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+</pre></td><td class="code"><pre>  <span class="literal">-</span> <span class="comment">Value</span> <span class="comment">representation</span>
+  <span class="literal">-</span> <span class="comment">Object</span> <span class="comment">model</span>
+    <span class="literal">-</span> <span class="comment">Dictionary</span> <span class="comment">mode</span>
+    <span class="literal">-</span> <span class="comment">Fast</span> <span class="comment">mode</span>
+  <span class="literal">-</span> <span class="comment">Built</span>-<span class="comment">in</span> <span class="comment">Objects</span>
+  <span class="literal">-</span> <span class="comment">Misc
+</pre></td></tr></table></figure>
+
+<h3>Execution Engine</h3>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>  <span class="literal">-</span> <span class="comment">Execute</span> <span class="comment">code
+</pre></td></tr></table></figure>
+
+<h3>GC</h3>
+<h3>Foreign Function Interface (FFI)</h3>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+</pre></td><td class="code"><pre>  - Handle interaction between JS <span class="keyword">and</span> <span class="string">"the outside world"</span>
+  - JS call out to native <span class="function"><span class="keyword">function</span>
+  - <span class="title">Native</span> <span class="title">function</span> <span class="title">call</span> <span class="title">into</span> <span class="title">JS</span> <span class="title">function</span>
+</pre></td></tr></table></figure>
+
+<h3>Debugger</h3>
+<p><a id="more"></a></p>
+<h2>Http is Hard</h2>
+<h3>Http?</h3>
+<h3>Response code</h3>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+</pre></td><td class="code"><pre> - <span class="number">418</span> code <span class="keyword">is</span> a joke
+ - <span class="number">5</span>xx <span class="built_in">server</span> <span class="keyword">error</span>
+</pre></td></tr></table></figure>
+
+<h3>Client Methods</h3>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+</pre></td><td class="code"><pre> <span class="literal">-</span> <span class="comment">POST</span>
+ <span class="literal">-</span> <span class="comment">GET</span>
+ <span class="literal">-</span> <span class="comment">PUT</span>
+ <span class="literal">-</span> <span class="comment">DELETE
+</pre></td></tr></table></figure>
+
+<h2>Lean Development with Node.js</h2>
+<h3>Founding a company</h3>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+</pre></td><td class="code"><pre> - Find problem <span class="keyword">and</span> want <span class="keyword">to</span> fix <span class="keyword">it</span>
+ - A little crazy
+</pre></td></tr></table></figure>
+
+<h3>Customer Interviews</h3>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+</pre></td><td class="code"><pre> <span class="literal">-</span> <span class="comment">open</span> <span class="comment">ended</span> <span class="comment">questions</span>
+ <span class="literal">-</span> <span class="comment">people</span> <span class="comment">you</span> <span class="comment">don't</span> <span class="comment">know
+</pre></td></tr></table></figure>
+
+<h3>Why node.js?</h3>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+</pre></td><td class="code"><pre> <span class="literal">-</span> <span class="comment">community</span>
+ <span class="literal">-</span> <span class="comment">open</span> <span class="comment">minded</span>
+ <span class="literal">-</span> <span class="comment">data</span> <span class="comment">collection
+</pre></td></tr></table></figure>
+
+<h3>Open minded</h3>
+<h3>Toolkit</h3>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="code"><pre> <span class="literal">-</span> <span class="comment">Express</span>
+ <span class="literal">-</span> <span class="comment">Postgres</span>
+ <span class="literal">-</span> <span class="comment">Node</span>-<span class="comment">orm</span>
+ <span class="literal">-</span> <span class="comment">Underscore</span>
+ <span class="literal">-</span> <span class="comment">Request</span>
+ <span class="literal">-</span> <span class="comment">Moment</span>
+ <span class="literal">-</span> <span class="comment">Phantom</span>.<span class="comment">js
+</pre></td></tr></table></figure>
+
+<h3>Resources</h3>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+</pre></td><td class="code"><pre> <span class="literal">-</span> <span class="comment">The</span> <span class="comment">Lean</span> <span class="comment">Startup</span>
+ <span class="literal">-</span> <span class="comment">The</span> <span class="comment">Four</span> <span class="comment">Steps</span> <span class="comment">to</span> <span class="comment">the</span> <span class="comment">Epiphany
+</pre></td></tr></table></figure>
+
+<h2>The Hitchhiker&#39;s Guide</h2>
+<h3>Server side</h3>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre> <span class="literal">-</span> <span class="comment">express
+</pre></td></tr></table></figure>
+
+<h3>Single-page app?</h3>
+<h3>Client Side</h3>
+<h3>WebRTC</h3>
+<h3>Framework</h3>
+<h3>Client Side</h3>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+</pre></td><td class="code"><pre>  <span class="literal">-</span> <span class="comment">CommonJS</span>
+  <span class="literal">-</span> <span class="comment">Require</span> <span class="string">.</span><span class="comment">js</span>
+  <span class="literal">-</span> <span class="comment">Angular</span>
+  <span class="literal">-</span> <span class="comment">Ember
+</pre></td></tr></table></figure>
+
+<h3>Github</h3>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre><span class="attribute">jingjs-talk
+</pre></td></tr></table></figure>
+
+]]></content>
+    <category scheme="nateriver520.github.io/tags/life/" term="life"/>
+    <category scheme="nateriver520.github.io/tags/js/" term="js"/>
+  </entry>
+  <entry>
+    <title type="html"><![CDATA[jing js (一)]]></title>
+    <link href="nateriver520.github.io/2013/11/09/jing-js-(一)/"/>
+    <id>nateriver520.github.io/2013/11/09/jing-js-(一)/</id>
+    <published>2013-11-09T12:52:30.000Z</published>
+    <updated>2013-11-10T06:02:03.000Z</updated>
+    <content type="html"><![CDATA[<h2>Info</h2>
+<p>这次<strong><em>lyk</em></strong>同学北上，参加 <a href="http://jingjs.org/" target="_blank">jingjs</a> ,我托lyk童鞋的福，也去jing js打了次酱油。</p>
+<p>以下是本次大会两天议程的简要笔记。</p>
+<h2>A Better World for node.js</h2>
+<h3>Debug</h3>
+<p>node-inspector</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre><span class="title">slc</span> <span class="built_in">debug</span> blog
+</pre></td></tr></table></figure>
+
+<h3>Performance</h3>
+<p><strong><em>strongOps</em></strong></p>
+<p>First  sign up to get app key.</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre><span class="title">slc</span> strongops [options]
+</pre></td></tr></table></figure>
+
+<p><a id="more"></a></p>
+<h2>Bitcoin</h2>
+<h3>Coinpunk</h3>
+<p>open source bitcoin wallet</p>
+<p>We cannot put key in web server.</p>
+<p>Move <strong><em>bitcoin key</em></strong> to brower</p>
+<p>Libraries</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+</pre></td><td class="code"><pre> <span class="literal">-</span> <span class="comment">Cryptojs</span>
+ <span class="literal">-</span> <span class="comment">SJCL</span>
+ <span class="literal">-</span> <span class="comment">JSBN</span>
+ <span class="literal">-</span> <span class="comment">BigNumber</span>.<span class="comment">js</span>
+ <span class="literal">-</span> <span class="comment">BitcoinJS</span>-<span class="comment">LIB</span>
+ <span class="literal">-</span> <span class="comment">RandJS
+</pre></td></tr></table></figure>
+
+<h2>My year with Node.js</h2>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre><span class="title">code</span> + tests + documentation = <span class="module"><span class="keyword">module</span>
+</pre></td></tr></table></figure>
+
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+</pre></td><td class="code"><pre> <span class="literal">-</span> <span class="comment">code</span>
+  <span class="literal">-</span> <span class="comment">implementation</span>
+  <span class="literal">-</span> <span class="comment">interfaces</span>
+ <span class="literal">-</span> <span class="comment">test</span>
+ <span class="literal">-</span> <span class="comment">documentation
+</pre></td></tr></table></figure>
+
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre><span class="type">Everything</span> is a <span class="module"><span class="keyword">module</span>, once finish, you can open source
+</pre></td></tr></table></figure>
+
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+</pre></td><td class="code"><pre>Service <span class="keyword">is</span>  provided  <span class="keyword">by</span> modules
+System  <span class="keyword">is</span>  provided  <span class="keyword">by</span> services
+</pre></td></tr></table></figure>
+
+<h2>Substack</h2>
+<h3>run</h3>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="code"><pre>curl http://<span class="number">192.168</span><span class="number">.1</span><span class="number">.129</span>:<span class="number">5000</span>/modules.tar.gz | tar xz
+Inside you will find <span class="number">3</span> adventures:
+learnyounode - learn <span class="keyword">the</span> basics <span class="keyword">of</span> node
+stream-adventure - learn you <span class="keyword">to</span> use streams <span class="keyword">in</span> node
+levelmeup - learn <span class="keyword">the</span> basics <span class="keyword">of</span> leveldb
+To <span class="command">run</span> an adventure, do `npm <span class="command">run</span> $ADVENTURE` like this:
+npm <span class="command">run</span> stream-adventure
+To <span class="command">run</span> <span class="keyword">the</span> leveldb adventures, you will need <span class="keyword">to</span> <span class="command">run</span> `npm rebuild` <span class="keyword">to</span> rebuild <span class="keyword">the</span> leveldb bindings <span class="keyword">for</span> your platform <span class="keyword">if</span> you're <span class="keyword">not</span> <span class="property">running</span> x64 linux.
+</pre></td></tr></table></figure>
+
+<h3>level db</h3>
+<h3>cities1000</h3>
+<h2>CPUJS</h2>
+<h3>用户端CPU性能监控</h3>
+<ul>
+<li>通过执行时间来衡量, 超过100ms 就感觉很慢, 所以把100ms当成顶峰。</li>
+<li>卡的占比 LTP(Lag Time Percentage)</li>
+</ul>
+<h3>任务式编程调度</h3>
+<ul>
+<li>one task = one function or one function includes a lot of functions.</li>
+</ul>
+<figure class="highlight lang-js"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>   CPUJS.load(foo());
+</pre></td></tr></table></figure>
+
+<h3>Task Manager</h3>
+<ul>
+<li>Loading tasks</li>
+<li>Killing tasks </li>
+</ul>
+<h2>Zero to Ready With Geddy</h2>
+<h3>Geddy</h3>
+<ul>
+<li>Start server</li>
+<li>Generators</li>
+<li>Run jake</li>
+</ul>
+<h2>On BigPipe On Node.js</h2>
+<h3>On Bigpipe</h3>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre><span class="title">Improve</span> web page loading performance by facebook
+</pre></td></tr></table></figure>
+
+<ul>
+<li>Chunked Encoding<ul>
+<li>content length vs chunked encoding ?</li>
+<li>chunked encoding don&#39;t need write content length, just use <strong><em>res.write</em></strong></li>
+</ul>
+</li>
+<li>Zoom in Bussiness Logic part<ul>
+<li>every part have different time to gernerate. </li>
+<li>But  Chunked Encoding cannot transfer part by part.</li>
+</ul>
+</li>
+<li>Bigpipe<ul>
+<li>bigpipe can do this.</li>
+<li>browser use javascript to show page by Chunked Encoding</li>
+</ul>
+</li>
+<li>Why node for Bigpipe?<ul>
+<li>HTML generate by Front developer.</li>
+</ul>
+</li>
+</ul>
+<h2>Pemelo…Untitled</h2>
+<h3>What?</h3>
+<ul>
+<li>game server framework</li>
+<li>Realtime users online game</li>
+</ul>
+<h3>Framework</h3>
+<ul>
+<li>Abstract servers </li>
+<li>Abstract request/response and broadcast/push</li>
+<li>rpc framework</li>
+</ul>
+<h3>Evolution</h3>
+<ul>
+<li>Pemelo connector</li>
+<li>Message compress</li>
+<li>Reliability<ul>
+<li>Zookeeper</li>
+</ul>
+</li>
+<li>New features<ul>
+<li>Plugin mechanism</li>
+<li>Crontab &amp; Filter</li>
+</ul>
+</li>
+</ul>
+<h3>Message push platform</h3>
+<ul>
+<li>long connection</li>
+<li>Use<ul>
+<li>Baidu </li>
+<li>SNDA </li>
+<li>jpush </li>
+<li>getui</li>
+</ul>
+</li>
+<li>Framework<ul>
+<li>Zookeeper</li>
+<li>Redis</li>
+<li>MQTT</li>
+<li>Socket IO</li>
+</ul>
+</li>
+<li>Broadcast Message<ul>
+<li>Create channel</li>
+<li>Filter clients</li>
+</ul>
+</li>
+<li>Multiplex link<ul>
+<li>Share one link with push-server</li>
+</ul>
+</li>
+<li>Tips<ul>
+<li>remeber bind <strong><em>cpu</em></strong></li>
+</ul>
+</li>
+</ul>
+<h2>Data Visualization</h2>
+<h3>junk charts</h3>
+<h3>Lying</h3>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+</pre></td><td class="code"><pre>  - size <span class="keyword">of</span> effect <span class="keyword">of</span> show <span class="typedef"><span class="keyword">data</span></span>
+  - pie is bad for you
+</pre></td></tr></table></figure>
+
+<h3>what can we do?</h3>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+</pre></td><td class="code"><pre>  <span class="literal">-</span> <span class="comment">less</span> <span class="comment">is</span> <span class="comment">more</span>
+  <span class="literal">-</span> <span class="comment">use</span> <span class="comment">a</span> <span class="comment">table
+</pre></td></tr></table></figure>
+
+<h3>Modern tools</h3>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+</pre></td><td class="code"><pre>  <span class="literal">-</span> <span class="comment">d3</span>
+  <span class="literal">-</span> <span class="comment">Canvas</span> <span class="comment">vs</span> <span class="comment">SVG</span>
+  <span class="literal">-</span> <span class="comment">Interactivity</span>
+  <span class="literal">-</span> <span class="comment">Extensibility</span>
+   <span class="literal">-</span> <span class="comment">Google</span> <span class="comment">Charts
+</pre></td></tr></table></figure>
+
+<h3>tips</h3>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+</pre></td><td class="code"><pre>  <span class="literal">-</span> <span class="comment">indeed</span>
+  <span class="literal">-</span> <span class="comment">find</span> <span class="comment">job
+</pre></td></tr></table></figure>
+
+]]></content>
+    <category scheme="nateriver520.github.io/tags/life/" term="life"/>
+    <category scheme="nateriver520.github.io/tags/js/" term="js"/>
+  </entry>
   <entry>
     <title type="html"><![CDATA[Thrift入门 (一)]]></title>
     <link href="nateriver520.github.io/2013/11/06/thrift入门-(一)/"/>
