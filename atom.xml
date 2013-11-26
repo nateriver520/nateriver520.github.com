@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Learning and Thinking]]></subtitle>
   <link href="nateriver520.github.io/atom.xml" rel="self"/>
   <link href="nateriver520.github.io"/>
-  <updated>2013-11-26T02:20:09.401Z</updated>
+  <updated>2013-11-26T02:29:32.318Z</updated>
   <id>nateriver520.github.io/</id>
   <author>
     <name><![CDATA[Shuo Yang]]></name>
@@ -16,7 +16,7 @@
     <link href="nateriver520.github.io/2013/11/26/pig-on-mac/"/>
     <id>nateriver520.github.io/2013/11/26/pig-on-mac/</id>
     <published>2013-11-26T02:14:19.000Z</published>
-    <updated>2013-11-26T02:19:47.000Z</updated>
+    <updated>2013-11-26T02:28:40.000Z</updated>
     <content type="html"><![CDATA[<h2>Install</h2>
 <p>首先是 Mac OS 下的安装</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre>1
@@ -29,7 +29,7 @@
 <p>Pig 运行分为两种模式，如果需要在本地调试的话，可以使用 shell 模式。</p>
 <p>通过运行下面的 command 就行了</p>
 <p><strong><em>Shell mode</em></strong></p>
-<figure class="highlight"><table><tr><td class="gutter"><pre>1
+<figure class="highlight lang-shell"><table><tr><td class="gutter"><pre>1
 </pre></td><td class="code"><pre> <span class="title">pig</span> -x local
 </pre></td></tr></table></figure>
 
@@ -48,7 +48,7 @@ examples because <span class="keyword">in</span> <span class="keyword">my</span>
 </pre></td></tr></table></figure>
 
 <p>接下来我们进入  <strong><em>shell</em></strong> 模式，一行行输入下面的语句来看结果。</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre>1
+<figure class="highlight lang-pig"><table><tr><td class="gutter"><pre>1
 2
 3
 4
@@ -59,11 +59,9 @@ examples because <span class="keyword">in</span> <span class="keyword">my</span>
 9
 10
 11
-12
 </pre></td><td class="code"><pre>input_file =  load '<span class="property">words</span>.txt' <span class="keyword">as</span> (line);
 
 /* TOKENIZE: split line <span class="keyword">into</span> <span class="property">word</span> column */
-
 <span class="property">words</span> = FOREACH input_file GENERATE FLATTEN(TOKENIZE(line)) <span class="keyword">as</span> <span class="property">word</span>;
 
 grpd = GROUP <span class="property">words</span> <span class="keyword">by</span> <span class="property">word</span>;
@@ -136,7 +134,7 @@ dump cntd;
 </pre></td></tr></table></figure>
 
 <p>首先我们想统计每个用户在我们的log 中发生了多少次行为。</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre>1
+<figure class="highlight lang-pig"><table><tr><td class="gutter"><pre>1
 2
 3
 4
@@ -171,7 +169,7 @@ DUMP Cntd;
 <p>首先我们要把page event 和 click event 分开，这可以通过 pig 的 <strong><em> split </em></strong> 实现。</p>
 <p>接着针对分开的 P_EVENT 和 C_EVENT 做 <strong><em>Group</em></strong>。</p>
 <p>最后在使用 <strong><em>Join</em></strong> 命令把 Cntd_P 和 Cntd_C 按用户 join 起来。</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre>1
+<figure class="highlight lang-pig"><table><tr><td class="gutter"><pre>1
 2
 3
 4
