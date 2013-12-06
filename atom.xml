@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Learning and Thinking]]></subtitle>
   <link href="nateriver520.github.io/atom.xml" rel="self"/>
   <link href="nateriver520.github.io"/>
-  <updated>2013-12-06T15:36:28.007Z</updated>
+  <updated>2013-12-06T15:41:58.629Z</updated>
   <id>nateriver520.github.io/</id>
   <author>
     <name><![CDATA[Shuo Yang]]></name>
@@ -16,7 +16,7 @@
     <link href="nateriver520.github.io/2013/12/06/tipit诞生记/"/>
     <id>nateriver520.github.io/2013/12/06/tipit诞生记/</id>
     <published>2013-12-06T15:12:44.000Z</published>
-    <updated>2013-12-06T15:35:53.000Z</updated>
+    <updated>2013-12-06T15:41:35.000Z</updated>
     <content type="html"><![CDATA[<h2>灵光一闪</h2>
 <p>之所以想做 Tip.It，完全是受自己初到北京时找房子各种痛苦的启发，当时为了跳过中介租房子，去58同城，豆瓣等各种网站去看房子，比如说下图就是一个典型的58同城的租房页面。</p>
 <p><img src="http://ww3.sinaimg.cn/large/7ed77ab1jw1ebaeffqboij20l30d80u5.jpg" alt=""></p>
@@ -47,15 +47,13 @@
 <p>可是当自己写到同步功能时，各种复杂的情况需要考虑，写出的程序自然是 bug 百出，同时考虑 Tip.It 设计的初衷是用户离线时也能使用，能够像 pocket 一样 archieve delete, 自然而然，程序逻辑变得非常复杂，用户每 sync 一次，mysql db 都要运行数十条语句。一度让我对这个项目产生了一些动摇，从最初的每天 check in code 到后面的长达一个月没有check in 过 code。</p>
 <h2>做减法</h2>
 <p><a id="more"></a><br>做过产品的人都知道对自己的产品做减法是最难的，尤其是像我这样一行行代码写上来的人，每一行代码 都是你不断重构，冥思苦想而成，砍掉某些功能，就意味着你的之前耗费了无数个夜晚写成的代码被删掉， 但是就像知乎上一个人说的那样。</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre>1
-</pre></td><td class="code"><pre>因为我们有过多的资源（主要是人力和时间）才会尝试添加各种功能。假设之前的规划是三个月，那么如果自己只有一周的时间的话，我会做什么？得到的产品形态就是减法之后的结果。
-</pre></td></tr></table></figure>
-
+<blockquote>
+<p>因为我们有过多的资源（主要是人力和时间）才会尝试添加各种功能。假设之前的规划是三个月，那么如果自己只有一周的时间的话，我会做什么？得到的产品形态就是减法之后的结果。</p>
+</blockquote>
 <p>于是经过自己的慎重的思考。</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre>1
-</pre></td><td class="code"><pre>Tip.It的核心诉求应该是为用户 构建一个足够简单灵活的To<span class="operator"><span class="keyword">do</span> List, 用户能够随时随地的 tip 文字，图片，并且能够随时查看。
-</pre></td></tr></table></figure>
-
+<blockquote>
+<p>Tip.It的核心诉求应该是为用户 构建一个足够简单灵活的Todo List, 用户能够随时随地的 tip 文字，图片，并且能够随时查看。</p>
+</blockquote>
 <p>于是自己做了最终的决定， 砍掉所有网络同步的功能， 这样整个 Tip.It 的代码只有原来的1/4，后端部分全部拿掉，最后 Tip.It 的功能只有下面的部分。</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre>1
 2
@@ -71,10 +69,11 @@
 <p>经过一个周末的删减和修改后，Tip.It 终于做的像我最初想要的样子了。</p>
 <p><img src="http://ww2.sinaimg.cn/large/7ed77ab1jw1ebaek1efedj207d0ghglz.jpg" alt=""></p>
 <p>最后再经过周日睡前的半小时，Tip.It 有了自己的官网 <a href="http://nateriver520.github.io/tipit/" target="_blank"><a href="http://nateriver520.github.io/tipit/">http://nateriver520.github.io/tipit/</a></a>，就像官网上说的一样，Tip.It 给人的感觉应该是这样：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre>1
-</pre></td><td class="code"><pre><span class="title">Just</span> find something you like, and Tip it
-</pre></td></tr></table></figure>
-
+<blockquote>
+<blockquote>
+<p>Just find something you like, and Tip it</p>
+</blockquote>
+</blockquote>
 <p>在经过 google 商店的注册，提交，Tip.It 终于上线拉！(这里忍不住吐槽一下 google, 发布个应用要 5 刀，居然地址还不能选中国)</p>
 <p>最后，感谢大家的支持，欢迎大家的各种 Feedback :)</p>
 ]]></content>
