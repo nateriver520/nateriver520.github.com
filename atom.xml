@@ -4,13 +4,44 @@
   <subtitle><![CDATA[Learning and Thinking]]></subtitle>
   <link href="nateriver520.github.io/atom.xml" rel="self"/>
   <link href="nateriver520.github.io"/>
-  <updated>2013-12-24T15:46:08.956Z</updated>
+  <updated>2014-01-04T04:45:16.999Z</updated>
   <id>nateriver520.github.io/</id>
   <author>
     <name><![CDATA[Shuo Yang]]></name>
     <email><![CDATA[shuo.yang@yahoo.com]]></email>
   </author>
   <generator uri="http://zespia.tw/hexo">Hexo</generator>
+  <entry>
+    <title type="html"><![CDATA[2013 To 2014]]></title>
+    <link href="nateriver520.github.io/2014/01/04/2013-=-2014/"/>
+    <id>nateriver520.github.io/2014/01/04/2013-=-2014/</id>
+    <published>2014-01-04T03:28:25.000Z</published>
+    <updated>2014-01-04T04:44:48.000Z</updated>
+    <content type="html"><![CDATA[<p>最近拖延症又犯了，本来打算写个年度总结的，结果一直拖到今天。</p>
+<p>总体来说，今年算是收获颇多，变化很大的一年.</p>
+<h2>地理位置</h2>
+<p>今年3月份的时候从生活了快7年的上海 迁移到了北京，在 Yahoo! 开始了一段新的旅程。<br><a id="more"></a><br><img src="http://ww4.sinaimg.cn/large/7ed77ab1jw1ec7em856glj20qs0o40xq.jpg" alt=""></p>
+<h2>工作</h2>
+<p>不知不觉在 Yahoo! 工作 8 个月了，来到 Yahoo! 后一切从头开始，以前熟悉或者习惯的技术在新的职位上全部都得从头学起。</p>
+<p>总体来说今年在Java，Hadoop 还有 团队协作上面有了很大的进展，在年终的时候大概列了下，自己直接参与了7-8个或大或小的项目，其中有一个项目直接产生了revenue，另外一个nlp的项目则帮助了很多人。</p>
+<p>在Yahoo!连续参加了三次Hack Day, 虽然都没有获奖，但是和小伙伴一起熬夜写代码，录视频也很开心。</p>
+<h2>业余项目</h2>
+<p>今年最让我觉得骄傲的是，我的 <a href="http://nateriver520.github.io/tipit/" target="_blank">Tip.It</a> 正式上线了，同时也开源了 <a href="https://github.com/nateriver520/gogo-cache" target="_blank">gogo-cache</a></p>
+<ul>
+<li><a href="http://nateriver520.github.io/2013/12/06/tipit%E8%AF%9E%E7%94%9F%E8%AE%B0/" target="_blank">tipit诞生记</a></li>
+<li><a href="https://github.com/nateriver520/gogo-cache" target="_blank">gogo-cache</a></li>
+</ul>
+<h2>2014</h2>
+<p>哈哈 总于到这个展望环节啦。</p>
+<ul>
+<li>深入学习 Go 和 Java</li>
+<li>为开源社区多做贡献</li>
+<li>在Machine Learning上面深入学习</li>
+<li>多写Blog 多交流</li>
+</ul>
+]]></content>
+    <category scheme="nateriver520.github.io/tags/life/" term="life"/>
+  </entry>
   <entry>
     <title type="html"><![CDATA[Go Cron 相关项目源码阅读]]></title>
     <link href="nateriver520.github.io/2013/12/24/go-cron-相关项目源码阅读/"/>
