@@ -5,7 +5,7 @@
   <meta name="google-site-verification" content="ZLbDyagJibV84TSODwr4oPmwcq_W0Cn06VfckCzDMVU" />
   <meta name="baidu-site-verification" content="ayZ0Oj89Av" />  
   
-  <title>Memcached 使用与简单监测 | Nateriver's Blog</title>
+  <title>Memcached 使用与简单监测 | Nateriver&#39;s Blog</title>
   <meta name="author" content="Shuo Yang">
   
   <meta name="description" content="Introduce
@@ -20,14 +20,14 @@ sudo apt-get install memcached">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   <meta property="og:title" content="Memcached 使用与简单监测"/>
-  <meta property="og:site_name" content="Nateriver's Blog"/>
+  <meta property="og:site_name" content="Nateriver&#39;s Blog"/>
 
   
     <meta property="og:image" content="undefined"/>
   
 
   <link href="/favicon.png" rel="icon">
-  <link rel="alternate" href="/atom.xml" title="Nateriver's Blog" type="application/atom+xml">
+  <link rel="alternate" href="/atom.xml" title="Nateriver&#39;s Blog" type="application/atom+xml">
   <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
   <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
   
@@ -36,7 +36,7 @@ sudo apt-get install memcached">
 
 <body>
   <header id="header" class="inner"><div class="alignleft">
-  <h1><a href="/">Nateriver's Blog</a></h1>
+  <h1><a href="/">Nateriver&#39;s Blog</a></h1>
   <h2><a href="/">Learning and Thinking</a></h2>
 </div>
 <nav id="main-nav" class="alignright">
@@ -56,6 +56,18 @@ sudo apt-get install memcached">
   <div id="content" class="inner">
     <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
   
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
   <div class="post-content">
     <header>
       
@@ -70,21 +82,21 @@ sudo apt-get install memcached">
     </header>
     <div class="entry">
       
-        <h2>Introduce</h2>
+        <h2 id="introduce">Introduce</h2>
 <p><a href="http://memcached.org/" target="_blank">Memcached</a>作为一个高并发内存Cached系统被很多大公司使用，最近也一直在用Memcached做项目也积累了一些相关经验。</p>
 <p>本篇博文主要记录Memcached的一些基本使用和简单的Monitor</p>
-<h2>Install</h2>
+<h2 id="install">Install</h2>
 <p>Memcached的安装很简单，在Ubuntu下面一行命令搞定。</p>
-<figure class="highlight lang-Shell"><table><tr><td class="gutter"><pre>1
-</pre></td><td class="code"><pre>su<span class="operator"><span class="keyword">do</span> apt-<span class="keyword">get</span> install memcached
+<figure class="highlight Shell"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre><span class="built_in">sudo</span> apt-get install memcached
 </pre></td></tr></table></figure>
 
 <a id="more"></a>
 
-<h2>Start</h2>
+<h2 id="start">Start</h2>
 <p>实际使用的时候，memcached需要调整内存大小和端口号等命令，则启动的使用时用以下的Command就行。</p>
-<figure class="highlight lang-Shell"><table><tr><td class="gutter"><pre>1
-</pre></td><td class="code"><pre><span class="comment">/usr/local/bin/memcached</span> <span class="literal">-</span><span class="comment">p</span> <span class="comment">11211</span> <span class="literal">-</span><span class="comment">m</span> <span class="comment">64m</span> <span class="literal">-</span><span class="comment">d
+<figure class="highlight Shell"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>/usr/<span class="built_in">local</span>/bin/memcached <span class="attribute">-p</span> <span class="number">11211</span> <span class="attribute">-m</span> <span class="number">64</span>m <span class="attribute">-d</span>
 </pre></td></tr></table></figure>
 
 <ul>
@@ -93,14 +105,14 @@ sudo apt-get install memcached">
 <li>-d 作为daemon在后台启动</li>
 <li>如果想trouble shotting 则加 -vv</li>
 </ul>
-<h2>Test</h2>
+<h2 id="test">Test</h2>
 <p>Test也很简单，安装官网的命令就行</p>
-<figure class="highlight lang-Shell"><table><tr><td class="gutter"><pre>1
-</pre></td><td class="code"><pre><span class="title">telnet</span> localhost <span class="number">11211</span>
+<figure class="highlight Shell"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>telnet localhost 11211
 </pre></td></tr></table></figure>
 
 <p>里面就能Get和Set了。</p>
-<h2>Use in Java</h2>
+<h2 id="use-in-java">Use in Java</h2>
 <p>由于项目是java的，所以以java为例子来介绍Java下Memcached的使用。</p>
 <p>Java下Memcached的客户端很多，这里介绍spymemcached</p>
 <p>spymemcached的使用很简单，在maven项目下面，我们加入如下依赖。</p>
@@ -117,7 +129,7 @@ sudo apt-get install memcached">
 </pre></td></tr></table></figure>
 
 <p>这样我们就能对Memcached操作了。</p>
-<figure class="highlight lang-Java"><table><tr><td class="gutter"><pre>1
+<figure class="highlight Java"><table><tr><td class="gutter"><pre>1
 2
 3
 4
@@ -157,11 +169,11 @@ sudo apt-get install memcached">
         }
     }
 
-    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> set(String key, String value，Integer expireTime ) <span class="keyword">throws</span> Exception {
+    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">set</span>(String key, String value，Integer expireTime ) <span class="keyword">throws</span> Exception {
         MEMCACHED_CLIENT.set(key, expireTime, value);
     }
 
-    <span class="keyword">public</span> <span class="keyword">static</span> String get(String key) <span class="keyword">throws</span> Exception {
+    <span class="keyword">public</span> <span class="keyword">static</span> String <span class="title">get</span>(String key) <span class="keyword">throws</span> Exception {
         Object value = MEMCACHED_CLIENT.get(key);
         <span class="keyword">if</span> (<span class="keyword">null</span> != value)
             <span class="keyword">return</span> value.toString();
@@ -171,13 +183,13 @@ sudo apt-get install memcached">
 }
 </pre></td></tr></table></figure>
 
-<h2>Monitor</h2>
+<h2 id="monitor">Monitor</h2>
 <p>我们可以通过以下简单的命令得知Memcached的运行状况,以此为扩充可以实现简单的Memcached检测shell。</p>
-<figure class="highlight lang-Shell"><table><tr><td class="gutter"><pre>1
-</pre></td><td class="code"><pre>  <span class="title">watch</span> <span class="string">"echo stats | nc 127.0.0.1 11211"</span>
+<figure class="highlight Shell"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>  watch <span class="string">"echo stats | nc 127.0.0.1 11211"</span>
 </pre></td></tr></table></figure>
 
-<h2>Conclusion</h2>
+<h2 id="conclusion">Conclusion</h2>
 <p>Memcached实际使用下来简单易用，各个平台上面也有相应的Client.</p>
 <p>但有时高并发可能会出现Timeout的情况，导致缓冲没办法命中的情况，具体原因还需要进一步调查。</p>
 <p>Memcahed的作者最近用Go语言去写了<a href="https://github.com/golang/groupcache" target="_blank">groupcache</a>很值得关注。</p>

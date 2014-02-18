@@ -5,7 +5,7 @@
   <meta name="google-site-verification" content="ZLbDyagJibV84TSODwr4oPmwcq_W0Cn06VfckCzDMVU" />
   <meta name="baidu-site-verification" content="ayZ0Oj89Av" />  
   
-  <title>Go Cron 相关项目源码阅读 | Nateriver's Blog</title>
+  <title>Go Cron 相关项目源码阅读 | Nateriver&#39;s Blog</title>
   <meta name="author" content="Shuo Yang">
   
   <meta name="description" content="介绍
@@ -22,14 +22,14 @@ rk/go-cron
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   <meta property="og:title" content="Go Cron 相关项目源码阅读"/>
-  <meta property="og:site_name" content="Nateriver's Blog"/>
+  <meta property="og:site_name" content="Nateriver&#39;s Blog"/>
 
   
     <meta property="og:image" content="undefined"/>
   
 
   <link href="/favicon.png" rel="icon">
-  <link rel="alternate" href="/atom.xml" title="Nateriver's Blog" type="application/atom+xml">
+  <link rel="alternate" href="/atom.xml" title="Nateriver&#39;s Blog" type="application/atom+xml">
   <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
   <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
   
@@ -38,7 +38,7 @@ rk/go-cron
 
 <body>
   <header id="header" class="inner"><div class="alignleft">
-  <h1><a href="/">Nateriver's Blog</a></h1>
+  <h1><a href="/">Nateriver&#39;s Blog</a></h1>
   <h2><a href="/">Learning and Thinking</a></h2>
 </div>
 <nav id="main-nav" class="alignright">
@@ -58,6 +58,18 @@ rk/go-cron
   <div id="content" class="inner">
     <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
   
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
   <div class="post-content">
     <header>
       
@@ -72,19 +84,19 @@ rk/go-cron
     </header>
     <div class="entry">
       
-        <h2>介绍</h2>
+        <h2 id="-">介绍</h2>
 <p>这段时间一直想把之前写的 monitor 用 go 重写一遍，由于自己是 go 的初学者， 自然要参考一些 go 的项目的 source code 来深入学习 go。</p>
 <p>Monitor 项目中 cron 占了很大的比重， 所以本次代码阅读主要集中在 github 上两个 Star 数比较多的项目上。</p>
 <ul>
 <li><a href="https://github.com/rk/go-cron" target="_blank">rk/go-cron</a></li>
 <li><a href="https://github.com/robfig/cron" target="_blank">robfig/cron</a></li>
 </ul>
-<h2>rk/go-cron</h2>
+<h2 id="rk-go-cron">rk/go-cron</h2>
 <p>这个项目比较小巧，整个项目不到100行代码，简单浏览了下很简单。</p>
 <a id="more"></a>
 
 <p>首先项目定义了job的数据结构</p>
-<figure class="highlight lang-go"><table><tr><td class="gutter"><pre>1
+<figure class="highlight go"><table><tr><td class="gutter"><pre>1
 2
 3
 4
@@ -97,7 +109,7 @@ rk/go-cron
 </pre></td></tr></table></figure>
 
 <p>然后通过这个函数来调度</p>
-<figure class="highlight lang-go"><table><tr><td class="gutter"><pre>1
+<figure class="highlight go"><table><tr><td class="gutter"><pre>1
 2
 3
 4
@@ -124,7 +136,7 @@ rk/go-cron
 </pre></td></tr></table></figure>
 
 <p>项目灰常简单，可惜作者自己定义了一套 cron 的语法。</p>
-<h2>robfig/cron</h2>
+<h2 id="robfig-cron">robfig/cron</h2>
 <p>这个项目就显得专业很多,从 test 到注释，再到文档都很全。</p>
 <p>我们还是从项目的数据结构入手，以下是cron项目定义数据结构的关系</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre>1
@@ -139,23 +151,23 @@ rk/go-cron
 10
 11
 12
-</pre></td><td class="code"><pre><span class="literal">-</span> <span class="comment">cron</span>
-  <span class="literal">-</span> <span class="comment">entries</span>  <span class="title">[</span><span class="title">]</span><span class="comment">*Entry</span>
-    <span class="literal">-</span> <span class="comment">Schedule</span> <span class="comment">(interface)</span>
-      <span class="literal">-</span> <span class="comment">Next(time</span>.<span class="comment">Time)</span> <span class="comment">time</span>.<span class="comment">Time</span>  <span class="comment">#</span> <span class="comment">返回给定时间之后的最近job启动时间</span>  
-    <span class="literal">-</span> <span class="comment">Next</span> <span class="comment">(time</span>.<span class="comment">Time)</span> <span class="comment">#下次运行时间</span>
-    <span class="literal">-</span> <span class="comment">Prev</span> <span class="comment">(time</span>.<span class="comment">Time)</span> <span class="comment">#上次运行时间</span>
-    <span class="literal">-</span> <span class="comment">Job</span> <span class="comment">(interface)</span>
-      <span class="literal">-</span> <span class="comment">Run()</span> 
-  <span class="literal">-</span> <span class="comment">stop</span>     <span class="comment">chan</span> <span class="comment">struct{}</span>
-  <span class="literal">-</span> <span class="comment">add</span>      <span class="comment">chan</span> <span class="comment">*Entry</span>
-  <span class="literal">-</span> <span class="comment">snapshot</span> <span class="comment">chan</span> <span class="title">[</span><span class="title">]</span><span class="comment">*Entry</span> 
-  <span class="literal">-</span> <span class="comment">running</span>  <span class="comment">bool
+</pre></td><td class="code"><pre>-<span class="ruby"> cron
+</span>  -<span class="ruby"> entries  []*<span class="constant">Entry</span>
+</span>    -<span class="ruby"> <span class="constant">Schedule</span> (interface)
+</span>      -<span class="ruby"> <span class="constant">Next</span>(time.<span class="constant">Time</span>) time.<span class="constant">Time</span>  <span class="comment"># 返回给定时间之后的最近job启动时间  </span>
+</span>    -<span class="ruby"> <span class="constant">Next</span> (time.<span class="constant">Time</span>) <span class="comment">#下次运行时间</span>
+</span>    -<span class="ruby"> <span class="constant">Prev</span> (time.<span class="constant">Time</span>) <span class="comment">#上次运行时间</span>
+</span>    -<span class="ruby"> <span class="constant">Job</span> (interface)
+</span>      -<span class="ruby"> <span class="constant">Run</span>() 
+</span>  -<span class="ruby"> stop     chan struct{}
+</span>  -<span class="ruby"> add      chan *<span class="constant">Entry</span>
+</span>  -<span class="ruby"> snapshot chan []*<span class="constant">Entry</span> 
+</span>  -<span class="ruby"> running  bool</span>
 </pre></td></tr></table></figure>
 
 <p>然后我们从项目的 sample code 入手。</p>
 <p>Demo code</p>
-<figure class="highlight lang-go"><table><tr><td class="gutter"><pre>1
+<figure class="highlight go"><table><tr><td class="gutter"><pre>1
 2
 3
 4
@@ -188,7 +200,7 @@ c.Stop()  <span class="comment">// Stop the scheduler (does not stop any jobs al
 </pre></td></tr></table></figure>
 
 <p>首先是 new 函数 很简单就是初始化一下， 返回cron的指针</p>
-<figure class="highlight lang-go"><table><tr><td class="gutter"><pre>1
+<figure class="highlight go"><table><tr><td class="gutter"><pre>1
 2
 3
 4
@@ -225,26 +237,26 @@ c.Stop()  <span class="comment">// Stop the scheduler (does not stop any jobs al
 12
 13
 14
-</pre></td><td class="code"><pre>// AddFunc adds a func <span class="keyword">to</span> <span class="keyword">the</span> Cron <span class="keyword">to</span> be <span class="command">run</span> <span class="function_start"><span class="keyword">on</span> <span class="title">the</span></span> <span class="keyword">given</span> schedule.
-func (c *Cron) AddFunc(spec <span class="type">string</span>, cmd func()) <span class="keyword">error</span> {
-<span class="command">  return</span> c.AddJob(spec, FuncJob(cmd))
+</pre></td><td class="code"><pre>// AddFunc adds <span class="operator">a</span> func <span class="built_in">to</span> <span class="operator">the</span> Cron <span class="built_in">to</span> be run <span class="command"><span class="keyword">on</span> <span class="title">the</span> <span class="title">given</span> <span class="title">schedule</span>.</span>
+func (c *Cron) AddFunc(spec <span class="keyword">string</span>, cmd func()) error {
+  <span class="constant">return</span> c.AddJob(spec, FuncJob(cmd))
 }
-
-// AddFunc adds a Job <span class="keyword">to</span> <span class="keyword">the</span> Cron <span class="keyword">to</span> be <span class="command">run</span> <span class="function_start"><span class="keyword">on</span> <span class="title">the</span></span> <span class="keyword">given</span> schedule.
-func (c *Cron) AddJob(spec <span class="type">string</span>, cmd Job) <span class="keyword">error</span> {
-  schedule, err := Parse(spec) //格式cron的字符，这个项目还做了下扩展，支持@hourly的形式
+<span class="comment">
+// AddFunc adds a Job to the Cron to be run on the given schedule.</span>
+func (c *Cron) AddJob(spec <span class="keyword">string</span>, cmd Job) error {
+  schedule, err := Parse(spec)<span class="comment"> //格式cron的字符，这个项目还做了下扩展，支持@hourly的形式</span>
   <span class="keyword">if</span> err != nil {
-<span class="command">    return</span> err
+    <span class="constant">return</span> err
   }
-  c.Schedule(schedule, cmd) //把schedule 加入到 cron 的 entries 中
-<span class="command">  return</span> nil
+  c.Schedule(schedule, cmd)<span class="comment"> //把schedule 加入到 cron 的 entries 中</span>
+  <span class="constant">return</span> nil
 }
 </pre></td></tr></table></figure>
 
 <p>最后是 <strong><em>Start</em></strong></p>
 <p>这个项目关键点就是用 <strong><em>channel</em></strong> 来驱动各项事件，比如结束，开始，运行等等。</p>
 <p>这样使得代码的结构清晰，方便阅读。</p>
-<figure class="highlight lang-go"><table><tr><td class="gutter"><pre>1
+<figure class="highlight go"><table><tr><td class="gutter"><pre>1
 2
 3
 4
@@ -373,7 +385,7 @@ func (c *Cron) AddJob(spec <span class="type">string</span>, cmd Job) <span clas
 </pre></td></tr></table></figure>
 
 <p>其他的代码逻辑都是在 parse cron 的样式。</p>
-<h2>结束</h2>
+<h2 id="-">结束</h2>
 <p>最后来个 robfig/cron 的 demo 结束 本篇blog</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre>1
 2
@@ -391,20 +403,20 @@ func (c *Cron) AddJob(spec <span class="type">string</span>, cmd Job) <span clas
 14
 15
 16
-</pre></td><td class="code"><pre><span class="package"><span class="keyword">package</span> <span class="title">main</span>
+</pre></td><td class="code"><pre>package main
 
-<span class="title">import</span> (
-  "<span class="title">fmt</span>"
-  "<span class="title">github</span>.<span class="title">com</span>/<span class="title">robfig</span>/<span class="title">cron</span>"
-  "<span class="title">time</span>"
+import (
+  <span class="string">"fmt"</span>
+  <span class="string">"github.com/robfig/cron"</span>
+  <span class="string">"time"</span>
 )
 
-<span class="title">func</span> <span class="title">main</span>() {</span>
-  fmt.Println(<span class="string">"Go cron test"</span>)
-  c := cron.New()
-  c.AddFunc(<span class="string">"*/5 * * * * *"</span>, func() { fmt.Println(<span class="string">"Every 5 Seconds"</span>) })
-  c.Start()
-  time.Sleep(<span class="number">900</span> * time.Second)
+func main() {
+  fmt<span class="preprocessor">.Println</span>(<span class="string">"Go cron test"</span>)
+  c := cron<span class="preprocessor">.New</span>()
+  c<span class="preprocessor">.AddFunc</span>(<span class="string">"*/5 * * * * *"</span>, func() { fmt<span class="preprocessor">.Println</span>(<span class="string">"Every 5 Seconds"</span>) })
+  c<span class="preprocessor">.Start</span>()
+  time<span class="preprocessor">.Sleep</span>(<span class="number">900</span> * time<span class="preprocessor">.Second</span>)
 
 }
 </pre></td></tr></table></figure>

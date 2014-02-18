@@ -5,7 +5,7 @@
   <meta name="google-site-verification" content="ZLbDyagJibV84TSODwr4oPmwcq_W0Cn06VfckCzDMVU" />
   <meta name="baidu-site-verification" content="ayZ0Oj89Av" />  
   
-  <title>jing js (二) | Nateriver's Blog</title>
+  <title>jing js (二) | Nateriver&#39;s Blog</title>
   <meta name="author" content="Shuo Yang">
   
   <meta name="description" content="Javascript Engine
@@ -50,14 +50,14 @@ Debugger">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   <meta property="og:title" content="jing js (二)"/>
-  <meta property="og:site_name" content="Nateriver's Blog"/>
+  <meta property="og:site_name" content="Nateriver&#39;s Blog"/>
 
   
     <meta property="og:image" content="undefined"/>
   
 
   <link href="/favicon.png" rel="icon">
-  <link rel="alternate" href="/atom.xml" title="Nateriver's Blog" type="application/atom+xml">
+  <link rel="alternate" href="/atom.xml" title="Nateriver&#39;s Blog" type="application/atom+xml">
   <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
   <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
   
@@ -66,7 +66,7 @@ Debugger">
 
 <body>
   <header id="header" class="inner"><div class="alignleft">
-  <h1><a href="/">Nateriver's Blog</a></h1>
+  <h1><a href="/">Nateriver&#39;s Blog</a></h1>
   <h2><a href="/">Learning and Thinking</a></h2>
 </div>
 <nav id="main-nav" class="alignright">
@@ -86,6 +86,18 @@ Debugger">
   <div id="content" class="inner">
     <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
   
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
   <div class="post-content">
     <header>
       
@@ -100,90 +112,90 @@ Debugger">
     </header>
     <div class="entry">
       
-        <h2>Javascript Engine</h2>
-<h3>Parser</h3>
+        <h2 id="javascript-engine">Javascript Engine</h2>
+<h3 id="parser">Parser</h3>
 <figure class="highlight"><table><tr><td class="gutter"><pre>1
-</pre></td><td class="code"><pre>  <span class="literal">-</span> <span class="comment">Usually</span> <span class="comment">generates</span> <span class="comment">AST
+</pre></td><td class="code"><pre>  -<span class="ruby"> <span class="constant">Usually</span> generates <span class="constant">AST</span></span>
 </pre></td></tr></table></figure>
 
-<h3>Runtime</h3>
+<h3 id="runtime">Runtime</h3>
 <figure class="highlight"><table><tr><td class="gutter"><pre>1
 2
 3
 4
 5
 6
-</pre></td><td class="code"><pre>  <span class="literal">-</span> <span class="comment">Value</span> <span class="comment">representation</span>
-  <span class="literal">-</span> <span class="comment">Object</span> <span class="comment">model</span>
-    <span class="literal">-</span> <span class="comment">Dictionary</span> <span class="comment">mode</span>
-    <span class="literal">-</span> <span class="comment">Fast</span> <span class="comment">mode</span>
-  <span class="literal">-</span> <span class="comment">Built</span>-<span class="comment">in</span> <span class="comment">Objects</span>
-  <span class="literal">-</span> <span class="comment">Misc
+</pre></td><td class="code"><pre>  -<span class="ruby"> <span class="constant">Value</span> representation
+</span>  -<span class="ruby"> <span class="constant">Object</span> model
+</span>    -<span class="ruby"> <span class="constant">Dictionary</span> mode
+</span>    -<span class="ruby"> <span class="constant">Fast</span> mode
+</span>  -<span class="ruby"> <span class="constant">Built</span>-<span class="keyword">in</span> <span class="constant">Objects</span>
+</span>  -<span class="ruby"> <span class="constant">Misc</span></span>
 </pre></td></tr></table></figure>
 
-<h3>Execution Engine</h3>
+<h3 id="execution-engine">Execution Engine</h3>
 <figure class="highlight"><table><tr><td class="gutter"><pre>1
-</pre></td><td class="code"><pre>  <span class="literal">-</span> <span class="comment">Execute</span> <span class="comment">code
+</pre></td><td class="code"><pre>  -<span class="ruby"> <span class="constant">Execute</span> code</span>
 </pre></td></tr></table></figure>
 
-<h3>GC</h3>
-<h3>Foreign Function Interface (FFI)</h3>
+<h3 id="gc">GC</h3>
+<h3 id="foreign-function-interface-ffi-">Foreign Function Interface (FFI)</h3>
 <figure class="highlight"><table><tr><td class="gutter"><pre>1
 2
 3
 </pre></td><td class="code"><pre>  - Handle interaction between JS <span class="keyword">and</span> <span class="string">"the outside world"</span>
-  - JS call out to native <span class="function"><span class="keyword">function</span>
-  - <span class="title">Native</span> <span class="title">function</span> <span class="title">call</span> <span class="title">into</span> <span class="title">JS</span> <span class="title">function</span>
+  - JS <span class="keyword">call</span> out <span class="keyword">to</span> native <span class="keyword">function</span>
+  - Native <span class="keyword">function</span> <span class="keyword">call</span> <span class="keyword">into</span> JS <span class="keyword">function</span>
 </pre></td></tr></table></figure>
 
-<h3>Debugger</h3>
+<h3 id="debugger">Debugger</h3>
 <p><a id="more"></a></p>
-<h2>Http is Hard</h2>
-<h3>Http?</h3>
-<h3>Response code</h3>
+<h2 id="http-is-hard">Http is Hard</h2>
+<h3 id="http-">Http?</h3>
+<h3 id="response-code">Response code</h3>
 <figure class="highlight"><table><tr><td class="gutter"><pre>1
 2
-</pre></td><td class="code"><pre> - <span class="number">418</span> code <span class="keyword">is</span> a joke
- - <span class="number">5</span>xx <span class="built_in">server</span> <span class="keyword">error</span>
+</pre></td><td class="code"><pre> -<span class="ruby"> <span class="number">418</span> code is a joke
+</span> -<span class="ruby"> <span class="number">5</span>xx server error</span>
 </pre></td></tr></table></figure>
 
-<h3>Client Methods</h3>
+<h3 id="client-methods">Client Methods</h3>
 <figure class="highlight"><table><tr><td class="gutter"><pre>1
 2
 3
 4
-</pre></td><td class="code"><pre> <span class="literal">-</span> <span class="comment">POST</span>
- <span class="literal">-</span> <span class="comment">GET</span>
- <span class="literal">-</span> <span class="comment">PUT</span>
- <span class="literal">-</span> <span class="comment">DELETE
+</pre></td><td class="code"><pre> -<span class="ruby"> <span class="constant">POST</span>
+</span> -<span class="ruby"> <span class="constant">GET</span>
+</span> -<span class="ruby"> <span class="constant">PUT</span>
+</span> -<span class="ruby"> <span class="constant">DELETE</span></span>
 </pre></td></tr></table></figure>
 
-<h2>Lean Development with Node.js</h2>
-<h3>Founding a company</h3>
+<h2 id="lean-development-with-node-js">Lean Development with Node.js</h2>
+<h3 id="founding-a-company">Founding a company</h3>
 <figure class="highlight"><table><tr><td class="gutter"><pre>1
 2
-</pre></td><td class="code"><pre> - Find problem <span class="keyword">and</span> want <span class="keyword">to</span> fix <span class="keyword">it</span>
- - A little crazy
+</pre></td><td class="code"><pre> -<span class="ruby"> <span class="constant">Find</span> problem <span class="keyword">and</span> want to fix it
+</span> -<span class="ruby"> <span class="constant">A</span> little crazy</span>
 </pre></td></tr></table></figure>
 
-<h3>Customer Interviews</h3>
+<h3 id="customer-interviews">Customer Interviews</h3>
 <figure class="highlight"><table><tr><td class="gutter"><pre>1
 2
-</pre></td><td class="code"><pre> <span class="literal">-</span> <span class="comment">open</span> <span class="comment">ended</span> <span class="comment">questions</span>
- <span class="literal">-</span> <span class="comment">people</span> <span class="comment">you</span> <span class="comment">don't</span> <span class="comment">know
+</pre></td><td class="code"><pre> -<span class="ruby"> open ended questions
+</span> -<span class="ruby"> people you don<span class="string">'t know</span></span>
 </pre></td></tr></table></figure>
 
-<h3>Why node.js?</h3>
+<h3 id="why-node-js-">Why node.js?</h3>
 <figure class="highlight"><table><tr><td class="gutter"><pre>1
 2
 3
-</pre></td><td class="code"><pre> <span class="literal">-</span> <span class="comment">community</span>
- <span class="literal">-</span> <span class="comment">open</span> <span class="comment">minded</span>
- <span class="literal">-</span> <span class="comment">data</span> <span class="comment">collection
+</pre></td><td class="code"><pre> -<span class="ruby"> community
+</span> -<span class="ruby"> open minded
+</span> -<span class="ruby"> data collection</span>
 </pre></td></tr></table></figure>
 
-<h3>Open minded</h3>
-<h3>Toolkit</h3>
+<h3 id="open-minded">Open minded</h3>
+<h3 id="toolkit">Toolkit</h3>
 <figure class="highlight"><table><tr><td class="gutter"><pre>1
 2
 3
@@ -191,46 +203,46 @@ Debugger">
 5
 6
 7
-</pre></td><td class="code"><pre> <span class="literal">-</span> <span class="comment">Express</span>
- <span class="literal">-</span> <span class="comment">Postgres</span>
- <span class="literal">-</span> <span class="comment">Node</span>-<span class="comment">orm</span>
- <span class="literal">-</span> <span class="comment">Underscore</span>
- <span class="literal">-</span> <span class="comment">Request</span>
- <span class="literal">-</span> <span class="comment">Moment</span>
- <span class="literal">-</span> <span class="comment">Phantom</span>.<span class="comment">js
+</pre></td><td class="code"><pre> -<span class="ruby"> <span class="constant">Express</span>
+</span> -<span class="ruby"> <span class="constant">Postgres</span>
+</span> -<span class="ruby"> <span class="constant">Node</span>-orm
+</span> -<span class="ruby"> <span class="constant">Underscore</span>
+</span> -<span class="ruby"> <span class="constant">Request</span>
+</span> -<span class="ruby"> <span class="constant">Moment</span>
+</span> -<span class="ruby"> <span class="constant">Phantom</span>.js</span>
 </pre></td></tr></table></figure>
 
-<h3>Resources</h3>
+<h3 id="resources">Resources</h3>
 <figure class="highlight"><table><tr><td class="gutter"><pre>1
 2
-</pre></td><td class="code"><pre> <span class="literal">-</span> <span class="comment">The</span> <span class="comment">Lean</span> <span class="comment">Startup</span>
- <span class="literal">-</span> <span class="comment">The</span> <span class="comment">Four</span> <span class="comment">Steps</span> <span class="comment">to</span> <span class="comment">the</span> <span class="comment">Epiphany
+</pre></td><td class="code"><pre> -<span class="ruby"> <span class="constant">The</span> <span class="constant">Lean</span> <span class="constant">Startup</span>
+</span> -<span class="ruby"> <span class="constant">The</span> <span class="constant">Four</span> <span class="constant">Steps</span> to the <span class="constant">Epiphany</span></span>
 </pre></td></tr></table></figure>
 
-<h2>The Hitchhiker&#39;s Guide</h2>
-<h3>Server side</h3>
+<h2 id="the-hitchhiker-s-guide">The Hitchhiker&#39;s Guide</h2>
+<h3 id="server-side">Server side</h3>
 <figure class="highlight"><table><tr><td class="gutter"><pre>1
-</pre></td><td class="code"><pre> <span class="literal">-</span> <span class="comment">express
+</pre></td><td class="code"><pre> -<span class="ruby"> express</span>
 </pre></td></tr></table></figure>
 
-<h3>Single-page app?</h3>
-<h3>Client Side</h3>
-<h3>WebRTC</h3>
-<h3>Framework</h3>
-<h3>Client Side</h3>
+<h3 id="single-page-app-">Single-page app?</h3>
+<h3 id="client-side">Client Side</h3>
+<h3 id="webrtc">WebRTC</h3>
+<h3 id="framework">Framework</h3>
+<h3 id="client-side">Client Side</h3>
 <figure class="highlight"><table><tr><td class="gutter"><pre>1
 2
 3
 4
-</pre></td><td class="code"><pre>  <span class="literal">-</span> <span class="comment">CommonJS</span>
-  <span class="literal">-</span> <span class="comment">Require</span> <span class="string">.</span><span class="comment">js</span>
-  <span class="literal">-</span> <span class="comment">Angular</span>
-  <span class="literal">-</span> <span class="comment">Ember
+</pre></td><td class="code"><pre>  -<span class="ruby"> <span class="constant">CommonJS</span>
+</span>  -<span class="ruby"> <span class="constant">Require</span> .js
+</span>  -<span class="ruby"> <span class="constant">Angular</span>
+</span>  -<span class="ruby"> <span class="constant">Ember</span></span>
 </pre></td></tr></table></figure>
 
-<h3>Github</h3>
+<h3 id="github">Github</h3>
 <figure class="highlight"><table><tr><td class="gutter"><pre>1
-</pre></td><td class="code"><pre><span class="attribute">jingjs-talk
+</pre></td><td class="code"><pre>jingjs<span class="attribute">-talk</span>
 </pre></td></tr></table></figure>
 
 

@@ -5,7 +5,7 @@
   <meta name="google-site-verification" content="ZLbDyagJibV84TSODwr4oPmwcq_W0Cn06VfckCzDMVU" />
   <meta name="baidu-site-verification" content="ayZ0Oj89Av" />  
   
-  <title>Pig On Mac | Nateriver's Blog</title>
+  <title>Pig On Mac | Nateriver&#39;s Blog</title>
   <meta name="author" content="Shuo Yang">
   
   <meta name="description" content="Install
@@ -32,14 +32,14 @@ Count Words
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   <meta property="og:title" content="Pig On Mac"/>
-  <meta property="og:site_name" content="Nateriver's Blog"/>
+  <meta property="og:site_name" content="Nateriver&#39;s Blog"/>
 
   
     <meta property="og:image" content="undefined"/>
   
 
   <link href="/favicon.png" rel="icon">
-  <link rel="alternate" href="/atom.xml" title="Nateriver's Blog" type="application/atom+xml">
+  <link rel="alternate" href="/atom.xml" title="Nateriver&#39;s Blog" type="application/atom+xml">
   <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
   <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
   
@@ -48,7 +48,7 @@ Count Words
 
 <body>
   <header id="header" class="inner"><div class="alignleft">
-  <h1><a href="/">Nateriver's Blog</a></h1>
+  <h1><a href="/">Nateriver&#39;s Blog</a></h1>
   <h2><a href="/">Learning and Thinking</a></h2>
 </div>
 <nav id="main-nav" class="alignright">
@@ -68,6 +68,18 @@ Count Words
   <div id="content" class="inner">
     <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
   
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
   <div class="post-content">
     <header>
       
@@ -82,7 +94,7 @@ Count Words
     </header>
     <div class="entry">
       
-        <h2>Install</h2>
+        <h2 id="install">Install</h2>
 <p>首先是 Mac OS 下的安装</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre>1
 2
@@ -90,15 +102,15 @@ Count Words
  brew <span class="keyword">install</span> pig
 </pre></td></tr></table></figure>
 
-<h2>Run</h2>
+<h2 id="run">Run</h2>
 <p>Pig 运行分为两种模式，如果需要在本地调试的话，可以使用 shell 模式。</p>
 <p>通过运行下面的 command 就行了</p>
 <p><strong><em>Shell mode</em></strong></p>
-<figure class="highlight lang-shell"><table><tr><td class="gutter"><pre>1
-</pre></td><td class="code"><pre> <span class="title">pig</span> -x local
+<figure class="highlight shell"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre> pig <span class="attribute">-x</span> <span class="built_in">local</span>
 </pre></td></tr></table></figure>
 
-<h2>Count Words</h2>
+<h2 id="count-words">Count Words</h2>
 <p>下面我们用个简单的统计单词次数的例子做进入 pig 世界的 hello world。</p>
 <p>首先我们在网上随便找一篇文章做实验。</p>
 <a id="more"></a>
@@ -113,7 +125,7 @@ examples because <span class="keyword">in</span> <span class="keyword">my</span>
 </pre></td></tr></table></figure>
 
 <p>接下来我们进入  <strong><em>shell</em></strong> 模式，一行行输入下面的语句来看结果。</p>
-<figure class="highlight lang-pig"><table><tr><td class="gutter"><pre>1
+<figure class="highlight pig"><table><tr><td class="gutter"><pre>1
 2
 3
 4
@@ -154,28 +166,33 @@ dump cntd;
 14
 15
 16
-</pre></td><td class="code"><pre><span class="list">(<span class="title">answers</span><span class="body">,<span class="number">1</span>)</span></span>
-<span class="list">(<span class="title">because</span><span class="body">,<span class="number">3</span>)</span></span>
-<span class="list">(<span class="title">comment</span><span class="body">,<span class="number">1</span>)</span></span>
-<span class="list">(<span class="title">people</span><span class="body">:,<span class="number">1</span>)</span></span>
-<span class="list">(<span class="title">satisfy</span><span class="body">,<span class="number">1</span>)</span></span>
-<span class="list">(<span class="title">telling</span><span class="body">,<span class="number">1</span>)</span></span>
-<span class="list">(<span class="title">criteria</span><span class="body">,<span class="number">1</span>)</span></span>
-<span class="list">(<span class="title">examples</span><span class="body">,<span class="number">1</span>)</span></span>
-<span class="list">(<span class="title">specific</span><span class="body">,<span class="number">2</span>)</span></span>
-<span class="list">(<span class="title">important</span><span class="body">,<span class="number">1</span>)</span></span>
-<span class="list">(<span class="title">pervasive</span><span class="body">,<span class="number">1</span>)</span></span>
-<span class="list">(<span class="title">algorithms</span><span class="body">,<span class="number">2</span>)</span></span>
-<span class="list">(<span class="title">experience</span><span class="body">,<span class="number">1</span>)</span></span>
-<span class="list">(<span class="title">worthwhile</span><span class="body">,<span class="number">1</span>)</span></span>
-<span class="list">(<span class="title">difficulty</span><span class="body">.,<span class="number">1</span>)</span></span>
-<span class="list">(<span class="title">everywhere</span><span class="body">!,<span class="number">1</span>)</span></span>
+</pre></td><td class="code"><pre><span class="list">(<span class="title">answers</span>,<span class="number">1</span>)</span>
+<span class="list">(<span class="title">because</span>,<span class="number">3</span>)</span>
+<span class="list">(<span class="title">comment</span>,<span class="number">1</span>)</span>
+<span class="list">(<span class="title">people</span>:,<span class="number">1</span>)</span>
+<span class="list">(<span class="title">satisfy</span>,<span class="number">1</span>)</span>
+<span class="list">(<span class="title">telling</span>,<span class="number">1</span>)</span>
+<span class="list">(<span class="title">criteria</span>,<span class="number">1</span>)</span>
+<span class="list">(<span class="title">examples</span>,<span class="number">1</span>)</span>
+<span class="list">(<span class="title">specific</span>,<span class="number">2</span>)</span>
+<span class="list">(<span class="title">important</span>,<span class="number">1</span>)</span>
+<span class="list">(<span class="title">pervasive</span>,<span class="number">1</span>)</span>
+<span class="list">(<span class="title">algorithms</span>,<span class="number">2</span>)</span>
+<span class="list">(<span class="title">experience</span>,<span class="number">1</span>)</span>
+<span class="list">(<span class="title">worthwhile</span>,<span class="number">1</span>)</span>
+<span class="list">(<span class="title">difficulty</span>.,<span class="number">1</span>)</span>
+<span class="list">(<span class="title">everywhere!</span>,<span class="number">1</span>)</span>
 </pre></td></tr></table></figure>
 
-<h2>More Complicate Example</h2>
+<h2 id="more-complicate-example">More Complicate Example</h2>
 <p><strong><em>Pig</em></strong> 作为一简单实用的 hadoop 操作语言，同 SQL 的语法类似，支持 join, filter, group by 等操作.</p>
 <p>下面我们用个更复杂的例子来看看这门语言的有趣的地方。</p>
-<p>我们首先伪造一部分数据,这些数据以空格分开<br>   - 第一行代表用户id<br>   - 第二行 type: 其中 p 代表用户看过改页面，c 代表用户点击广告<br>   - 第三行 用户看过的url</p>
+<p>我们首先伪造一部分数据,这些数据以空格分开</p>
+<ul>
+<li>第一行代表用户id</li>
+<li>第二行 type: 其中 p 代表用户看过改页面，c 代表用户点击广告</li>
+<li>第三行 用户看过的url</li>
+</ul>
 <figure class="highlight"><table><tr><td class="gutter"><pre>1
 2
 3
@@ -186,20 +203,20 @@ dump cntd;
 8
 9
 10
-</pre></td><td class="code"><pre>    user1 p <span class="transposed_variable">news.</span><span class="number">21</span><span class="transposed_variable">cn.</span>com/social/daqian/<span class="number">2008</span>/<span class="number">05</span>/<span class="number">29</span>/<span class="number">4777194</span><span class="transposed_variable">_1.</span>shtml
-    user2 c <span class="transposed_variable">www.</span><span class="number">6</span><span class="transposed_variable">wei.</span>net/dianshiju/????\xa1\xe9|????do=index
-    user1 p <span class="transposed_variable">www.</span><span class="transposed_variable">shanziba.</span>com/
-    user1 p <span class="transposed_variable">download.</span><span class="transposed_variable">it168.</span>com/<span class="number">18</span>/<span class="number">1805</span>/<span class="number">13947</span>/<span class="number">13947</span><span class="transposed_variable">_3.</span>shtml
-    user2 p <span class="transposed_variable">you.</span><span class="transposed_variable">video.</span><span class="transposed_variable">sina.</span><span class="transposed_variable">com.</span>cn/b/<span class="number">5924814</span>-<span class="number">1246200450.</span>html
-    user3 c <span class="transposed_variable">www.</span><span class="transposed_variable">shanziba.</span>com/
-    user1 c <span class="transposed_variable">download.</span><span class="transposed_variable">it168.</span>com/<span class="number">18</span>/<span class="number">1805</span>/<span class="number">13947</span>/<span class="number">13947</span><span class="transposed_variable">_3.</span>shtml
-    user3 p <span class="transposed_variable">you.</span><span class="transposed_variable">video.</span><span class="transposed_variable">sina.</span><span class="transposed_variable">com.</span>cn/b/<span class="number">5924814</span>-<span class="number">1246200450.</span>html
+</pre></td><td class="code"><pre>    user1 p news<span class="number">.21</span>cn<span class="preprocessor">.com</span>/social/daqian/<span class="number">2008</span>/<span class="number">05</span>/<span class="number">29</span>/<span class="number">4777194</span>_1<span class="preprocessor">.shtml</span>
+    user2 c www<span class="number">.6</span>wei<span class="preprocessor">.net</span>/dianshiju/????\xa1\xe9|????do=index
+    user1 p www<span class="preprocessor">.shanziba</span><span class="preprocessor">.com</span>/
+    user1 p download<span class="preprocessor">.it</span>168<span class="preprocessor">.com</span>/<span class="number">18</span>/<span class="number">1805</span>/<span class="number">13947</span>/<span class="number">13947</span>_3<span class="preprocessor">.shtml</span>
+    user2 p you<span class="preprocessor">.video</span><span class="preprocessor">.sina</span><span class="preprocessor">.com</span><span class="preprocessor">.cn</span>/b/<span class="number">5924814</span>-<span class="number">1246200450.</span>html
+    user3 c www<span class="preprocessor">.shanziba</span><span class="preprocessor">.com</span>/
+    user1 c download<span class="preprocessor">.it</span>168<span class="preprocessor">.com</span>/<span class="number">18</span>/<span class="number">1805</span>/<span class="number">13947</span>/<span class="number">13947</span>_3<span class="preprocessor">.shtml</span>
+    user3 p you<span class="preprocessor">.video</span><span class="preprocessor">.sina</span><span class="preprocessor">.com</span><span class="preprocessor">.cn</span>/b/<span class="number">5924814</span>-<span class="number">1246200450.</span>html
     user1 c 
     user3 p
 </pre></td></tr></table></figure>
 
 <p>首先我们想统计每个用户在我们的log 中发生了多少次行为。</p>
-<figure class="highlight lang-pig"><table><tr><td class="gutter"><pre>1
+<figure class="highlight pig"><table><tr><td class="gutter"><pre>1
 2
 3
 4
@@ -209,14 +226,14 @@ dump cntd;
 8
 9
 10
-</pre></td><td class="code"><pre>Users = LOAD <span class="attribute">'server_log</span>.txt' USING PigStorage(' ') as (user ,<span class="keyword">type</span> ,url) ;
+</pre></td><td class="code"><pre>Users <span class="subst">=</span> LOAD <span class="string">'server_log.txt'</span> USING PigStorage(<span class="string">' '</span>) as (user ,<span class="keyword">type</span> ,url) ;
 
 <span class="comment">/* filter bad log */</span>
-Fltrd = FILTER Users by url <span class="keyword">is</span> <span class="keyword">not</span> <span class="keyword">null</span>;
+Fltrd <span class="subst">=</span> FILTER Users <span class="keyword">by</span> url is <span class="literal">not</span> <span class="built_in">null</span>;
 
-Grpd = <span class="keyword">GROUP</span> Fltrd by user;
+Grpd <span class="subst">=</span> <span class="keyword">GROUP</span> Fltrd <span class="keyword">by</span> user;
 
-Cntd = foreach Grpd <span class="keyword">generate</span> FLATTEN(<span class="keyword">group</span>), COUNT(Fltrd.user);
+Cntd <span class="subst">=</span> foreach Grpd generate FLATTEN(<span class="keyword">group</span>), COUNT(Fltrd<span class="built_in">.</span>user);
 
 DUMP Cntd;
 </pre></td></tr></table></figure>
@@ -225,16 +242,16 @@ DUMP Cntd;
 <figure class="highlight"><table><tr><td class="gutter"><pre>1
 2
 3
-</pre></td><td class="code"><pre><span class="list">(<span class="title">user1</span><span class="body">,<span class="number">4</span>)</span></span>
-<span class="list">(<span class="title">user2</span><span class="body">,<span class="number">2</span>)</span></span>
-<span class="list">(<span class="title">user3</span><span class="body">,<span class="number">2</span>)</span></span>
+</pre></td><td class="code"><pre><span class="list">(<span class="title">user1</span>,<span class="number">4</span>)</span>
+<span class="list">(<span class="title">user2</span>,<span class="number">2</span>)</span>
+<span class="list">(<span class="title">user3</span>,<span class="number">2</span>)</span>
 </pre></td></tr></table></figure>
 
 <p>如果我们想更进一步，查看每个用户发生了多少次click 和多少次 page view. 则稍显麻烦。</p>
 <p>首先我们要把page event 和 click event 分开，这可以通过 pig 的 <strong><em> split </em></strong> 实现。</p>
 <p>接着针对分开的 P_EVENT 和 C_EVENT 做 <strong><em>Group</em></strong>。</p>
 <p>最后在使用 <strong><em>Join</em></strong> 命令把 Cntd_P 和 Cntd_C 按用户 join 起来。</p>
-<figure class="highlight lang-pig"><table><tr><td class="gutter"><pre>1
+<figure class="highlight pig"><table><tr><td class="gutter"><pre>1
 2
 3
 4
@@ -254,29 +271,29 @@ DUMP Cntd;
 18
 19
 20
-</pre></td><td class="code"><pre><span class="title">Users</span> = LOAD <span class="string">'server_log.txt'</span> USING PigStorage(<span class="string">' '</span>) as (user ,type ,url) ;
+</pre></td><td class="code"><pre>Users = LOAD <span class="string">'server_log.txt'</span> <span class="keyword">USING</span> PigStorage(<span class="string">' '</span>) <span class="keyword">as</span> (user ,<span class="keyword">type</span> ,url) ;
 
-<span class="title">Fltrd</span> = FILTER Users by url is not null;
+Fltrd = FILTER Users <span class="keyword">by</span> url <span class="keyword">is</span> <span class="keyword">not</span> null;
 
-<span class="title">SPLIT</span> Fltrd INTO P_EVENT if type == <span class="string">'p'</span>, 
-                 C_EVENT if type == <span class="string">'c'</span>; 
+SPLIT Fltrd <span class="keyword">INTO</span> P_EVENT <span class="keyword">if</span> <span class="keyword">type</span> == <span class="string">'p'</span>, 
+                 C_EVENT <span class="keyword">if</span> <span class="keyword">type</span> == <span class="string">'c'</span>; 
 
-<span class="title">Grpd_P</span> = GROUP P_EVENT by user;
-<span class="title">Grpd_C</span> = GROUP C_EVENT by user;
+Grpd_P = <span class="keyword">GROUP</span> P_EVENT <span class="keyword">by</span> user;
+Grpd_C = <span class="keyword">GROUP</span> C_EVENT <span class="keyword">by</span> user;
 
-<span class="title">Cntd_P</span> = foreach Grpd_P generate FLATTEN(group) as group_p,COUNT(P_EVENT.user) as p_count;
-<span class="title">Cntd_C</span> = foreach Grpd_C generate FLATTEN(group) as group_c, COUNT(C_EVENT.user) as c_count;
-
-
-<span class="title">Jnd</span> = JOIN Cntd_P BY group_p, Cntd_C BY group_c; 
-
-<span class="title">Cntd_P_C</span> = FOREACH Jnd GENERATE Cntd_P::group_p, Cntd_P::p_count,Cntd_C::c_count;
+Cntd_P = foreach Grpd_P generate FLATTEN(<span class="keyword">group</span>) <span class="keyword">as</span> group_p,COUNT(P_EVENT.user) <span class="keyword">as</span> p_count;
+Cntd_C = foreach Grpd_C generate FLATTEN(<span class="keyword">group</span>) <span class="keyword">as</span> group_c, COUNT(C_EVENT.user) <span class="keyword">as</span> c_count;
 
 
-<span class="title">DUMP</span> Cntd_P_C;
+Jnd = <span class="keyword">JOIN</span> Cntd_P <span class="keyword">BY</span> group_p, Cntd_C <span class="keyword">BY</span> group_c; 
+
+Cntd_P_C = FOREACH Jnd GENERATE Cntd_P::group_p, Cntd_P::p_count,Cntd_C::c_count;
+
+
+DUMP Cntd_P_C;
 </pre></td></tr></table></figure>
 
-<h2>Tips</h2>
+<h2 id="tips">Tips</h2>
 <p>总体来看 pig 作为一门类 SQL 语言，其灵活性和方便性在处理较为简单的大数据任务时，相比传统的 hadoop job 有着不可比拟的优势。</p>
 <p>但 pig 也有缺点，比如 debug 信息不明确等。 </p>
 <p>在日常写 pig 脚本时，可以通过 <strong><em>Describe</em></strong> 的方式来查看当前结果的结构来方便编码。</p>

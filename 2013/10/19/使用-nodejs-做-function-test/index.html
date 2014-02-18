@@ -5,7 +5,7 @@
   <meta name="google-site-verification" content="ZLbDyagJibV84TSODwr4oPmwcq_W0Cn06VfckCzDMVU" />
   <meta name="baidu-site-verification" content="ayZ0Oj89Av" />  
   
-  <title>使用 Node.js 做 Function Test | Nateriver's Blog</title>
+  <title>使用 Node.js 做 Function Test | Nateriver&#39;s Blog</title>
   <meta name="author" content="Shuo Yang">
   
   <meta name="description" content="Info
@@ -17,14 +17,14 @@ Node.js 应该是个不错的选择，并且对 json 有着天然的支持，于
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   <meta property="og:title" content="使用 Node.js 做 Function Test"/>
-  <meta property="og:site_name" content="Nateriver's Blog"/>
+  <meta property="og:site_name" content="Nateriver&#39;s Blog"/>
 
   
     <meta property="og:image" content="undefined"/>
   
 
   <link href="/favicon.png" rel="icon">
-  <link rel="alternate" href="/atom.xml" title="Nateriver's Blog" type="application/atom+xml">
+  <link rel="alternate" href="/atom.xml" title="Nateriver&#39;s Blog" type="application/atom+xml">
   <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
   <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
   
@@ -33,7 +33,7 @@ Node.js 应该是个不错的选择，并且对 json 有着天然的支持，于
 
 <body>
   <header id="header" class="inner"><div class="alignleft">
-  <h1><a href="/">Nateriver's Blog</a></h1>
+  <h1><a href="/">Nateriver&#39;s Blog</a></h1>
   <h2><a href="/">Learning and Thinking</a></h2>
 </div>
 <nav id="main-nav" class="alignright">
@@ -53,6 +53,18 @@ Node.js 应该是个不错的选择，并且对 json 有着天然的支持，于
   <div id="content" class="inner">
     <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
   
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
   <div class="post-content">
     <header>
       
@@ -67,13 +79,13 @@ Node.js 应该是个不错的选择，并且对 json 有着天然的支持，于
     </header>
     <div class="entry">
       
-        <h2>Info</h2>
+        <h2 id="info">Info</h2>
 <p>上周 meeting 上同事说他们现在在用 java 写 function test，产生了很多冗余的代码，整个项目也变得比较臃肿。现在迫切需要个简单的模板项目能快速搭建function test。</p>
 <p>后来我回去想了想，为什么我们非得用 java 来做 function test 呢? </p>
 <p>Node.js 应该是个不错的选择，并且对 json 有着天然的支持，于是回去在 github 上随手一搜，还果真有相关的项目: <a href="https://github.com/masylum/testosterone" target="_blank">testosterone</a>，于是便有了这篇blog.</p>
 <a id="more"></a>
 
-<h2>Server</h2>
+<h2 id="server">Server</h2>
 <p>要做demo，自然要有相应的server来支撑。</p>
 <p>在这里我们选用Express作为server。</p>
 <p>首先我们建立一个server的文件夹，新建package.json。</p>
@@ -93,13 +105,13 @@ Node.js 应该是个不错的选择，并且对 json 有着天然的支持，于
     "<span class="attribute">private</span>": <span class="value"><span class="literal">true</span></span>,
     "<span class="attribute">dependencies</span>": <span class="value">{
         "<span class="attribute">express</span>": <span class="value"><span class="string">"3.x"</span>
-    }</span>
-}</span>
+    </span>}
+</span>}
 </pre></td></tr></table></figure>
 
 <p>接下来run command</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre>1
-</pre></td><td class="code"><pre><span class="title">npm</span> install
+</pre></td><td class="code"><pre>npm <span class="keyword">install</span>
 </pre></td></tr></table></figure>
 
 <p>这样express就装上了。</p>
@@ -170,73 +182,73 @@ Node.js 应该是个不错的选择，并且对 json 有着天然的支持，于
 64
 65
 </pre></td><td class="code"><pre>
-var express = require(<span class="string">'express'</span>)
+<span class="keyword">var</span> express = require(<span class="string">'express'</span>)
   , app = express();
 
-<span class="transposed_variable">app.</span>use(<span class="transposed_variable">express.</span>bodyParser());
+app.<span class="keyword">use</span>(express.bodyParser());
 
-<span class="transposed_variable">app.</span>get(<span class="string">'/hello'</span>, <span class="keyword">function</span>(req, res) <span class="cell">{
-    res.send("hello world");
-}</span>);
+app.<span class="keyword">get</span>(<span class="string">'/hello'</span>, <span class="function"><span class="keyword">function</span><span class="params">(req, res)</span> {</span>
+    res.send(<span class="string">"hello world"</span>);
+});
  
-<span class="transposed_variable">app.</span>get(<span class="string">'/'</span>, <span class="function"><span class="keyword">function</span> <span class="params">(req, res)</span> {</span>
+app.<span class="keyword">get</span>(<span class="string">'/'</span>, <span class="function"><span class="keyword">function</span> <span class="params">(req, res)</span> {</span>
   setTimeout(<span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
-    <span class="transposed_variable">res.</span>writeHead(<span class="number">200</span>, <span class="cell">{<span class="string">'Content-Type'</span>: <span class="string">'text/plain'</span>}</span>);
-    <span class="transposed_variable">res.</span><span class="keyword">end</span>();
+    res.writeHead(<span class="number">200</span>, {<span class="string">'Content-Type'</span>: <span class="string">'text/plain'</span>});
+    res.end();
   }, <span class="number">200</span>);
 });
 
-<span class="transposed_variable">app.</span>get(<span class="string">'/hi'</span>, <span class="function"><span class="keyword">function</span> <span class="params">(req, res)</span> {</span>
-  <span class="keyword">if</span> (<span class="transposed_variable">req.</span>param(<span class="string">'hello'</span>) !== undefined) <span class="cell">{
-    res.writeHead(<span class="number">200</span>, {<span class="string">'Content-Type'</span>: <span class="string">'text/plain'</span>}</span>);
-    <span class="transposed_variable">res.</span><span class="keyword">end</span>(<span class="string">'Hello!'</span>);
-  } <span class="keyword">else</span> <span class="cell">{
-    res.writeHead(<span class="number">500</span>, {<span class="string">'Content-Type'</span>: <span class="string">'text/plain'</span>}</span>);
-    <span class="transposed_variable">res.</span><span class="keyword">end</span>(<span class="string">'use post instead'</span>);
+app.<span class="keyword">get</span>(<span class="string">'/hi'</span>, <span class="function"><span class="keyword">function</span> <span class="params">(req, res)</span> {</span>
+  <span class="keyword">if</span> (req.param(<span class="string">'hello'</span>) !== <span class="literal">undefined</span>) {
+    res.writeHead(<span class="number">200</span>, {<span class="string">'Content-Type'</span>: <span class="string">'text/plain'</span>});
+    res.end(<span class="string">'Hello!'</span>);
+  } <span class="keyword">else</span> {
+    res.writeHead(<span class="number">500</span>, {<span class="string">'Content-Type'</span>: <span class="string">'text/plain'</span>});
+    res.end(<span class="string">'use post instead'</span>);
   }
 });
 
-<span class="transposed_variable">app.</span>post(<span class="string">'/hi'</span>, <span class="function"><span class="keyword">function</span> <span class="params">(req, res)</span> {</span>
+app.post(<span class="string">'/hi'</span>, <span class="function"><span class="keyword">function</span> <span class="params">(req, res)</span> {</span>
   setTimeout(<span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
-    <span class="transposed_variable">res.</span>writeHead(<span class="number">200</span>, <span class="cell">{<span class="string">'Content-Type'</span>: <span class="string">'text/plain'</span>}</span>);
-    <span class="transposed_variable">res.</span><span class="keyword">end</span>(<span class="transposed_variable">req.</span>param(<span class="string">'message'</span>) || <span class="string">'message'</span>);
+    res.writeHead(<span class="number">200</span>, {<span class="string">'Content-Type'</span>: <span class="string">'text/plain'</span>});
+    res.end(req.param(<span class="string">'message'</span>) || <span class="string">'message'</span>);
   }, <span class="number">100</span>);
 });
 
 
-<span class="transposed_variable">app.</span>get(<span class="string">'/user'</span>, <span class="keyword">function</span>(req, res) <span class="cell">{
+app.<span class="keyword">get</span>(<span class="string">'/user'</span>, <span class="function"><span class="keyword">function</span><span class="params">(req, res)</span> {</span>
     res.send(
       [
-        {name:<span class="string">'jack'</span>}</span>, 
-        <span class="cell">{name:<span class="string">'tom'</span>}</span>
+        {name:<span class="string">'jack'</span>}, 
+        {name:<span class="string">'tom'</span>}
       ]
     );
 });
 
-<span class="transposed_variable">app.</span>get(<span class="string">'/user/:id'</span>, <span class="keyword">function</span>(req, res) <span class="cell">{
+app.<span class="keyword">get</span>(<span class="string">'/user/:id'</span>, <span class="function"><span class="keyword">function</span><span class="params">(req, res)</span> {</span>
     res.send({
         id: <span class="number">1</span>, 
-        name: "node js", 
-        description: "I am node js"
-    }</span>);
+        name: <span class="string">"node js"</span>, 
+        description: <span class="string">"I am node js"</span>
+    });
 });
 
-<span class="transposed_variable">app.</span>post(<span class="string">'/user/edit'</span>, <span class="function"><span class="keyword">function</span> <span class="params">(req, res)</span> {</span>
+app.post(<span class="string">'/user/edit'</span>, <span class="function"><span class="keyword">function</span> <span class="params">(req, res)</span> {</span>
   setTimeout(<span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
-    <span class="transposed_variable">res.</span>send(<span class="cell">{
+    res.send({
       id:req.param(<span class="string">'id'</span>),
       status:<span class="number">1</span>
-    }</span>);
+    });
   }, <span class="number">100</span>);
 });
 
 
  
-<span class="transposed_variable">app.</span>listen(<span class="number">3000</span>);
-<span class="transposed_variable">console.</span><span class="built_in">log</span>(<span class="string">'Listening on port 3000...'</span>);
+app.listen(<span class="number">3000</span>);
+console.log(<span class="string">'Listening on port 3000...'</span>);
 </pre></td></tr></table></figure>
 
-<h2>testosterone</h2>
+<h2 id="testosterone">testosterone</h2>
 <p>server 架设完毕，自然要开始做测试了。</p>
 <p>这个 project 的接口的命名都挺优雅，直接上代码。</p>
 <p>首先是测试基本的功能</p>
@@ -256,22 +268,22 @@ var express = require(<span class="string">'express'</span>)
 14
 15
 16
-</pre></td><td class="code"><pre><span class="title">var</span> testosterone = require('testosterone')({port: <span class="number">3000</span>})
-  , assert = testosterone.assert;
+</pre></td><td class="code"><pre>var testosterone = <span class="built_in">require</span>(<span class="string">'testosterone'</span>)({port: <span class="number">3000</span>})
+  , <span class="built_in">assert</span> = testosterone.<span class="built_in">assert</span>;
 
-<span class="title">testosterone</span>
-  .get('/hello',function(res){
-    assert.equal(res.statusCode, <span class="number">200</span>);
+testosterone
+  .get(<span class="string">'/hello'</span>,<span class="function"><span class="keyword">function</span><span class="params">(res)</span></span>{
+    <span class="built_in">assert</span>.equal(res.statusCode, <span class="number">200</span>);
   })
 
-  .get('/hi',function(res){
-    assert.equal(res.statusCode, <span class="number">500</span>);
+  .get(<span class="string">'/hi'</span>,<span class="function"><span class="keyword">function</span><span class="params">(res)</span></span>{
+    <span class="built_in">assert</span>.equal(res.statusCode, <span class="number">500</span>);
   })
 
-  .post('/hi', {<span class="typedef"><span class="keyword">data</span>: <span class="container">{<span class="title">message</span>: '<span class="title">hola'</span>}</span>}, <span class="container">{
-    <span class="title">status</span>: 200
-    ,<span class="title">body</span>: '<span class="title">hola'</span>
-  }</span>);</span>
+  .post(<span class="string">'/hi'</span>, {data: {message: <span class="string">'hola'</span>}}, {
+    status: <span class="number">200</span>
+    ,body: <span class="string">'hola'</span>
+  });
 </pre></td></tr></table></figure>
 
 <p>然后针对上面模拟的user的get post 做简单的测试。</p>
@@ -297,27 +309,27 @@ var express = require(<span class="string">'express'</span>)
 20
 21
 22
-</pre></td><td class="code"><pre>var testosterone = <span class="built_in">require</span>(<span class="string">'testosterone'</span>)({port: <span class="number">3000</span>})
-  , <span class="built_in">assert</span> = testosterone.<span class="built_in">assert</span>;
+</pre></td><td class="code"><pre><span class="keyword">var</span> testosterone = <span class="built_in">require</span>(<span class="string">'testosterone'</span>)({port: <span class="number">3000</span>})
+  , assert = testosterone.assert;
 
 testosterone  
-  .get(<span class="string">'/user'</span>, <span class="function"><span class="keyword">function</span> <span class="params">(res)</span></span> {
-    var expectRes = [
+  .get(<span class="string">'/user'</span>, <span class="function"><span class="keyword">function</span> <span class="params">(res)</span> {</span>
+    <span class="keyword">var</span> expectRes = [
         {name:<span class="string">'jack'</span>}, 
         {name:<span class="string">'tom'</span>}
     ];
 
-    <span class="built_in">assert</span>.equal(res.statusCode, <span class="number">200</span>);
-    <span class="built_in">assert</span>.equal(JSON.stringify(JSON.parse(res.body)),JSON.stringify(expectRes));
+    assert.equal(res.statusCode, <span class="number">200</span>);
+    assert.equal(<span class="built_in">JSON</span>.stringify(<span class="built_in">JSON</span>.parse(res.body)),<span class="built_in">JSON</span>.stringify(expectRes));
   })
 
-  .get(<span class="string">'/user/1'</span>, <span class="function"><span class="keyword">function</span> <span class="params">(res)</span></span> {
+  .get(<span class="string">'/user/1'</span>, <span class="function"><span class="keyword">function</span> <span class="params">(res)</span> {</span>
     
-    var user = JSON.parse(res.body);
+    <span class="keyword">var</span> user = <span class="built_in">JSON</span>.parse(res.body);
 
-    <span class="built_in">assert</span>.equal(res.statusCode, <span class="number">200</span>);
-    <span class="built_in">assert</span>.equal(user.name, <span class="string">"node js"</span>);
-    <span class="built_in">assert</span>.equal(user.description,<span class="string">"I am node js"</span>);
+    assert.equal(res.statusCode, <span class="number">200</span>);
+    assert.equal(user.name, <span class="string">"node js"</span>);
+    assert.equal(user.description,<span class="string">"I am node js"</span>);
   })
 </pre></td></tr></table></figure>
 
@@ -362,9 +374,9 @@ testosterone
 38
 39
 40
-</pre></td><td class="code"><pre>var testosterone = require(<span class="string">'testosterone'</span>)(<span class="cell">{port: <span class="number">3000</span>, title: <span class="string">'test user api'</span>}</span>)
-  , add = <span class="transposed_variable">testosterone.</span>add
-  , assert = <span class="transposed_variable">testosterone.</span>assert;
+</pre></td><td class="code"><pre><span class="keyword">var</span> testosterone = <span class="built_in">require</span>(<span class="string">'testosterone'</span>)({port: <span class="number">3000</span>, title: <span class="string">'test user api'</span>})
+  , add = testosterone.add
+  , assert = testosterone.assert;
 
 testosterone
   .add(
@@ -373,15 +385,15 @@ testosterone
     <span class="string">'THEN it should return user json'</span>,
 
     <span class="function"><span class="keyword">function</span> <span class="params">(cb)</span> {</span>
-      <span class="transposed_variable">testosterone.</span>get(<span class="string">'/user/1'</span>, cb(<span class="function"><span class="keyword">function</span> <span class="params">(res)</span> {</span>
-        var expectRes = <span class="cell">{
+      testosterone.get(<span class="string">'/user/1'</span>, cb(<span class="function"><span class="keyword">function</span> <span class="params">(res)</span> {</span>
+        <span class="keyword">var</span> expectRes = {
             id: <span class="number">1</span>, 
-            name: "node js", 
-            description: "I am node js"
-        }</span>;
+            name: <span class="string">"node js"</span>, 
+            description: <span class="string">"I am node js"</span>
+        };
 
-        <span class="transposed_variable">assert.</span>equal(<span class="transposed_variable">res.</span>statusCode, <span class="number">200</span>);
-        <span class="transposed_variable">assert.</span>equal(<span class="transposed_variable">JSON.</span>stringify(<span class="transposed_variable">JSON.</span>parse(<span class="transposed_variable">res.</span>body)), <span class="transposed_variable">JSON.</span>stringify(expectRes));
+        assert.equal(res.statusCode, <span class="number">200</span>);
+        assert.equal(<span class="built_in">JSON</span>.stringify(<span class="built_in">JSON</span>.parse(res.body)), <span class="built_in">JSON</span>.stringify(expectRes));
       }));
   })
 
@@ -392,19 +404,19 @@ testosterone
     <span class="string">'THEN it should resturn status 1'</span>,
 
     <span class="function"><span class="keyword">function</span> <span class="params">(cb)</span> {</span>
-      <span class="transposed_variable">testosterone.</span>post(<span class="string">'/user/edit'</span>, <span class="cell">{data: {id: <span class="number">1</span>, name: "change name"}</span>}, cb(<span class="function"><span class="keyword">function</span> <span class="params">(res)</span> {</span>
-        var res = <span class="transposed_variable">JSON.</span>parse(<span class="transposed_variable">res.</span>body);
-        <span class="transposed_variable">assert.</span>equal(<span class="transposed_variable">res.</span>status, <span class="number">1</span>);
+      testosterone.post(<span class="string">'/user/edit'</span>, {data: {id: <span class="number">1</span>, name: <span class="string">"change name"</span>}}, cb(<span class="function"><span class="keyword">function</span> <span class="params">(res)</span> {</span>
+        <span class="keyword">var</span> res = <span class="built_in">JSON</span>.parse(res.body);
+        assert.equal(res.status, <span class="number">1</span>);
       }));
     }
   ) 
 
   .run(<span class="function"><span class="keyword">function</span> <span class="params">()</span> {</span>
-    require(<span class="string">'sys'</span>).print(<span class="string">'done!'</span>);
+    <span class="built_in">require</span>(<span class="string">'sys'</span>).print(<span class="string">'done!'</span>);
   });
 </pre></td></tr></table></figure>
 
-<h2>Conclusion</h2>
+<h2 id="conclusion">Conclusion</h2>
 <p>通过以上的代码，可以看出，同java 冗长的 http 头设置等，testosterone确实简单和优雅了不少。</p>
 <p>testosterone 是个蛮不错的项目，作者写的文档简单易懂，在 test 文件夹里面也有很多测试代码。</p>
 <p>本篇 blog 的 sample code 的放在 <a href="https://github.com/nateriver520/function-test-demo" target="_blank"><a href="https://github.com/nateriver520/function-test-demo">https://github.com/nateriver520/function-test-demo</a></a></p>

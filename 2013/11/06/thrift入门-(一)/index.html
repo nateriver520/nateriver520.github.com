@@ -5,7 +5,7 @@
   <meta name="google-site-verification" content="ZLbDyagJibV84TSODwr4oPmwcq_W0Cn06VfckCzDMVU" />
   <meta name="baidu-site-verification" content="ayZ0Oj89Av" />  
   
-  <title>Thrift入门 (一) | Nateriver's Blog</title>
+  <title>Thrift入门 (一) | Nateriver&#39;s Blog</title>
   <meta name="author" content="Shuo Yang">
   
   <meta name="description" content="Install
@@ -73,14 +73,14 @@ add depndency
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   <meta property="og:title" content="Thrift入门 (一)"/>
-  <meta property="og:site_name" content="Nateriver's Blog"/>
+  <meta property="og:site_name" content="Nateriver&#39;s Blog"/>
 
   
     <meta property="og:image" content="undefined"/>
   
 
   <link href="/favicon.png" rel="icon">
-  <link rel="alternate" href="/atom.xml" title="Nateriver's Blog" type="application/atom+xml">
+  <link rel="alternate" href="/atom.xml" title="Nateriver&#39;s Blog" type="application/atom+xml">
   <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
   <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
   
@@ -89,7 +89,7 @@ add depndency
 
 <body>
   <header id="header" class="inner"><div class="alignleft">
-  <h1><a href="/">Nateriver's Blog</a></h1>
+  <h1><a href="/">Nateriver&#39;s Blog</a></h1>
   <h2><a href="/">Learning and Thinking</a></h2>
 </div>
 <nav id="main-nav" class="alignright">
@@ -109,6 +109,18 @@ add depndency
   <div id="content" class="inner">
     <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
   
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
   <div class="post-content">
     <header>
       
@@ -123,21 +135,21 @@ add depndency
     </header>
     <div class="entry">
       
-        <h2>Install</h2>
+        <h2 id="install">Install</h2>
 <p>Go to <a href="http://thrift.apache.org/download/" target="_blank">thrift</a> page download thrift.</p>
-<figure class="highlight lang-shell"><table><tr><td class="gutter"><pre>1
+<figure class="highlight shell"><table><tr><td class="gutter"><pre>1
 2
 3
 4
-</pre></td><td class="code"><pre><span class="title">brew</span> install boost
- ./configure <span class="comment">--without-python</span>
-<span class="title">sudo</span> make
-<span class="title">sudo</span> make install
+</pre></td><td class="code"><pre>brew install boost
+ ./configure --without-python
+<span class="built_in">sudo</span> make
+<span class="built_in">sudo</span> make install
 </pre></td></tr></table></figure>
 
-<h2>Maven</h2>
+<h2 id="maven">Maven</h2>
 <p>add depndency</p>
-<figure class="highlight lang-xml"><table><tr><td class="gutter"><pre>1
+<figure class="highlight xml"><table><tr><td class="gutter"><pre>1
 2
 3
 4
@@ -185,8 +197,9 @@ add depndency
 <span class="tag">&lt;/<span class="title">dependency</span>&gt;</span>
 </pre></td></tr></table></figure>
 
-<p><a id="more"></a><br>add plugin</p>
-<figure class="highlight lang-xml"><table><tr><td class="gutter"><pre>1
+<p><a id="more"></a>
+add plugin</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre>1
 2
 3
 4
@@ -236,7 +249,7 @@ add depndency
 <span class="tag">&lt;/<span class="title">plugin</span>&gt;</span>
 </pre></td></tr></table></figure>
 
-<h2>Hello World</h2>
+<h2 id="hello-world">Hello World</h2>
 <p>Now we can define our service.</p>
 <p>first create the file <strong><em>test.thrift</em></strong></p>
 <figure class="highlight"><table><tr><td class="gutter"><pre>1
@@ -254,25 +267,25 @@ add depndency
 </pre></td></tr></table></figure>
 
 <p>We define a function <strong><em>say</em></strong>, then we run command to generate java class</p>
-<figure class="highlight lang-shell"><table><tr><td class="gutter"><pre>1
-</pre></td><td class="code"><pre><span class="comment">thrift</span>  <span class="literal">-</span><span class="literal">-</span><span class="comment">gen</span> <span class="comment">java</span> <span class="comment">test</span>.<span class="comment">thrfit
+<figure class="highlight shell"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre><span class="comment">thrift</span>  <span class="literal">-</span><span class="literal">-</span><span class="comment">gen</span> <span class="comment">java</span> <span class="comment">test</span><span class="string">.</span><span class="comment">thrfit</span>
 </pre></td></tr></table></figure>
 
 <p>We copy the class to our java project. and implements the <strong><em>test.Iface</em></strong> interface</p>
-<figure class="highlight lang-java"><table><tr><td class="gutter"><pre>1
+<figure class="highlight java"><table><tr><td class="gutter"><pre>1
 2
 3
 4
 5
 </pre></td><td class="code"><pre><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestImpl</span> <span class="keyword">implements</span> <span class="title">Test</span>.<span class="title">Iface</span> {</span>
-    <span class="keyword">public</span> <span class="keyword">void</span> say(String word) <span class="keyword">throws</span> TException{
+    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title">say</span>(String word) <span class="keyword">throws</span> TException{
         System.out.println(<span class="string">"I am server, I want to say: "</span> + word);
     }
 }
 </pre></td></tr></table></figure>
 
 <p>Now we build the service to let server say something.</p>
-<figure class="highlight lang-java"><table><tr><td class="gutter"><pre>1
+<figure class="highlight java"><table><tr><td class="gutter"><pre>1
 2
 3
 4
@@ -299,7 +312,7 @@ add depndency
 25
 26
 </pre></td><td class="code"><pre><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Server</span> {</span>
-    <span class="keyword">public</span> <span class="keyword">void</span> startServer() {
+    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title">startServer</span>() {
         <span class="keyword">try</span> {
 
             TServerSocket serverTransport = <span class="keyword">new</span> TServerSocket(<span class="number">1234</span>);
@@ -319,7 +332,7 @@ add depndency
         }
     }
 
-    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span>(String[] args) {
         Server server = <span class="keyword">new</span> Server();
         server.startServer();
     }
@@ -327,7 +340,7 @@ add depndency
 </pre></td></tr></table></figure>
 
 <p>We also should have a client to send word.</p>
-<figure class="highlight lang-java"><table><tr><td class="gutter"><pre>1
+<figure class="highlight java"><table><tr><td class="gutter"><pre>1
 2
 3
 4
@@ -364,7 +377,7 @@ add depndency
 <span class="keyword">import</span> org.apache.thrift.transport.TTransportException;
 
 <span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Client</span> {</span>
-    <span class="keyword">public</span> <span class="keyword">void</span> startClient() {
+    <span class="keyword">public</span> <span class="keyword">void</span> <span class="title">startClient</span>() {
         TTransport transport;
         <span class="keyword">try</span> {
             transport = <span class="keyword">new</span> TSocket(<span class="string">"localhost"</span>, <span class="number">1234</span>);
@@ -380,7 +393,7 @@ add depndency
         }
     }
 
-    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> main(String[] args) {
+    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span>(String[] args) {
         Client client = <span class="keyword">new</span> Client();
         client.startClient();
     }
@@ -389,10 +402,10 @@ add depndency
 
 <p>Now when start <strong><em>server</em></strong> and run <strong><em>client</em></strong>, the message will show like this:</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre>1
-</pre></td><td class="code"><pre>I am <span class="keyword">server</span>, I want to say:  Hello I am <span class="keyword">client</span>
+</pre></td><td class="code"><pre><span class="keyword">I</span> am server, <span class="keyword">I</span> want to say:  Hello <span class="keyword">I</span> am client
 </pre></td></tr></table></figure>
 
-<h2>Reference</h2>
+<h2 id="reference">Reference</h2>
 <p><a href="http://roclinux.cn/?p=3316" target="_blank">Linux大棚版Thrift入门教程</a></p>
 <p><a href="http://www.cnblogs.com/johnc/archive/2011/06/19/2084508.html" target="_blank">Thrift java服务器与客户端示例</a></p>
 

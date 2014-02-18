@@ -5,21 +5,21 @@
   <meta name="google-site-verification" content="ZLbDyagJibV84TSODwr4oPmwcq_W0Cn06VfckCzDMVU" />
   <meta name="baidu-site-verification" content="ayZ0Oj89Av" />  
   
-  <title>Hadoop | Nateriver's Blog</title>
+  <title>Hadoop | Nateriver&#39;s Blog</title>
   <meta name="author" content="Shuo Yang">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   
-  <meta property="og:site_name" content="Nateriver's Blog"/>
+  <meta property="og:site_name" content="Nateriver&#39;s Blog"/>
 
   
     <meta property="og:image" content="undefined"/>
   
 
   <link href="/favicon.png" rel="icon">
-  <link rel="alternate" href="/atom.xml" title="Nateriver's Blog" type="application/atom+xml">
+  <link rel="alternate" href="/atom.xml" title="Nateriver&#39;s Blog" type="application/atom+xml">
   <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
   <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
   
@@ -28,7 +28,7 @@
 
 <body>
   <header id="header" class="inner"><div class="alignleft">
-  <h1><a href="/">Nateriver's Blog</a></h1>
+  <h1><a href="/">Nateriver&#39;s Blog</a></h1>
   <h2><a href="/">Learning and Thinking</a></h2>
 </div>
 <nav id="main-nav" class="alignright">
@@ -53,6 +53,18 @@
   
     <article class="post">
   
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
   <div class="post-content">
     <header>
       
@@ -67,7 +79,7 @@
     </header>
     <div class="entry">
       
-        <h2>Install</h2>
+        <h2 id="install">Install</h2>
 <p>首先是 Mac OS 下的安装</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre>1
 2
@@ -75,15 +87,15 @@
  brew <span class="keyword">install</span> pig
 </pre></td></tr></table></figure>
 
-<h2>Run</h2>
+<h2 id="run">Run</h2>
 <p>Pig 运行分为两种模式，如果需要在本地调试的话，可以使用 shell 模式。</p>
 <p>通过运行下面的 command 就行了</p>
 <p><strong><em>Shell mode</em></strong></p>
-<figure class="highlight lang-shell"><table><tr><td class="gutter"><pre>1
-</pre></td><td class="code"><pre> <span class="title">pig</span> -x local
+<figure class="highlight shell"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre> pig <span class="attribute">-x</span> <span class="built_in">local</span>
 </pre></td></tr></table></figure>
 
-<h2>Count Words</h2>
+<h2 id="count-words">Count Words</h2>
 <p>下面我们用个简单的统计单词次数的例子做进入 pig 世界的 hello world。</p>
 <p>首先我们在网上随便找一篇文章做实验。</p>
 

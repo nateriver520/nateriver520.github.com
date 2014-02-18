@@ -5,7 +5,7 @@
   <meta name="google-site-verification" content="ZLbDyagJibV84TSODwr4oPmwcq_W0Cn06VfckCzDMVU" />
   <meta name="baidu-site-verification" content="ayZ0Oj89Av" />  
   
-  <title>Mac OS 10.9 软件环境故障排查 | Nateriver's Blog</title>
+  <title>Mac OS 10.9 软件环境故障排查 | Nateriver&#39;s Blog</title>
   <meta name="author" content="Shuo Yang">
   
   <meta name="description" content="之前在10.7上搭配好了一系列的软件环境。
@@ -16,14 +16,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   <meta property="og:title" content="Mac OS 10.9 软件环境故障排查"/>
-  <meta property="og:site_name" content="Nateriver's Blog"/>
+  <meta property="og:site_name" content="Nateriver&#39;s Blog"/>
 
   
     <meta property="og:image" content="undefined"/>
   
 
   <link href="/favicon.png" rel="icon">
-  <link rel="alternate" href="/atom.xml" title="Nateriver's Blog" type="application/atom+xml">
+  <link rel="alternate" href="/atom.xml" title="Nateriver&#39;s Blog" type="application/atom+xml">
   <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
   <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
   
@@ -32,7 +32,7 @@
 
 <body>
   <header id="header" class="inner"><div class="alignleft">
-  <h1><a href="/">Nateriver's Blog</a></h1>
+  <h1><a href="/">Nateriver&#39;s Blog</a></h1>
   <h2><a href="/">Learning and Thinking</a></h2>
 </div>
 <nav id="main-nav" class="alignright">
@@ -51,6 +51,18 @@
 <div class="clearfix"></div></header>
   <div id="content" class="inner">
     <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
   
   <div class="post-content">
     <header>
@@ -71,20 +83,20 @@
 <p>试图通过 brew 安装 mongo db 也编译出错。本篇 blog 就是基于上述问题的一系列排查。</p>
 <a id="more"></a>
 
-<h3>brew</h3>
+<h3 id="brew">brew</h3>
 <p>首先是查看 brew 是否有问题。</p>
-<figure class="highlight lang-shell"><table><tr><td class="gutter"><pre>1
-</pre></td><td class="code"><pre><span class="title">brew</span> doctor
+<figure class="highlight shell"><table><tr><td class="gutter"><pre>1
+</pre></td><td class="code"><pre>brew doctor
 </pre></td></tr></table></figure>
 
 <p>然后按照 brew 列出的各项 warning fix。</p>
 <p>这样的话再装 mongo db 就没问题了。</p>
-<h3>rvm</h3>
+<h3 id="rvm">rvm</h3>
 <p>在继续装rvm的时候遇到安装完成后，始终找不到rvm的问题。</p>
 <p>通过echo的方法，发现当前 Terminal 加载的配置位于 <strong><em>/etc/profile</em></strong></p>
 <p>所以一开始 source 一下就好了。</p>
 <p>这样就能成功的找到 rvm</p>
-<h3>参考</h3>
+<h3 id="-">参考</h3>
 <p><a href="http://www.interworks.com/blogs/ckaukis/2013/03/05/installing-ruby-200-rvm-and-homebrew-mac-os-x-108-mountain-lion" target="_blank">Installing Ruby 2.0.0 with RVM and Homebrew on Mac OS X 10.8 Mountain Lion</a></p>
 <p><a href="http://railsapps.github.io/installrubyonrails-mac.html" target="_blank">Install Ruby on Rails · Mac OS X Mavericks</a></p>
 
