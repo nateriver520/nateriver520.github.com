@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Learning and Thinking]]></subtitle>
   <link href="nateriver520.github.io/atom.xml" rel="self"/>
   <link href="nateriver520.github.io"/>
-  <updated>2014-02-26T13:46:16.788Z</updated>
+  <updated>2014-03-02T15:37:55.126Z</updated>
   <id>nateriver520.github.io/</id>
   <author>
     <name><![CDATA[Shuo Yang]]></name>
@@ -16,7 +16,7 @@
     <link href="nateriver520.github.io/2014/02/26/用virtual-box搭建集群环境/"/>
     <id>nateriver520.github.io/2014/02/26/用virtual-box搭建集群环境/</id>
     <published>2014-02-26T13:18:11.000Z</published>
-    <updated>2014-02-26T13:46:06.000Z</updated>
+    <updated>2014-03-02T15:37:05.000Z</updated>
     <content type="html"><![CDATA[<h2 id="-">引言</h2>
 <p>前段时间一直在实验各种大数据查询和存储工具，由于公司的机器是特别定制的，搭环境不是很方便，而且不能随时上去玩，所以就考虑用Virtual Box搭建集群的方式测试各种工具。</p>
 <h2 id="-">环境</h2>
@@ -31,8 +31,8 @@
 
 <p><img src="http://webees.me/wp-content/uploads/2013/11/create-new-vm.png" alt="创建虚拟机"></p>
 <p><img src="http://webees.me/wp-content/uploads/2013/11/select-64bit.png" alt="选择64位"></p>
-<p>在mac上需要先创建 hostonly adapter
-<img src="http://webees.me/wp-content/uploads/2013/11/create-hostonly-adapter.png" alt="创建适配器"></p>
+<p>在mac上需要先创建 hostonly adapter</p>
+<p><img src="http://webees.me/wp-content/uploads/2013/11/create-hostonly-adapter.png" alt="创建适配器"></p>
 <p>创建完成后添加第二块网卡</p>
 <p><img src="http://webees.me/wp-content/uploads/2013/11/attach-hostonly-adapter.png" alt="网卡配置"></p>
 <p>接下来就可以在虚拟机中载入镜像安装了</p>
@@ -230,14 +230,14 @@ service network restart
 
 <p>集群这样就搭建完成啦。整个过程真累，尤其是网卡这块折腾了半天。</p>
 ]]></content>
-    <category scheme="nateriver520.github.io/tags/Hadoop/" term="Hadoop"/>
+    <category scheme="nateriver520.github.io/tags/hadoop/" term="hadoop"/>
   </entry>
   <entry>
     <title type="html"><![CDATA[两道算法]]></title>
     <link href="nateriver520.github.io/2014/01/08/两道算法/"/>
     <id>nateriver520.github.io/2014/01/08/两道算法/</id>
     <published>2014-01-08T01:32:47.000Z</published>
-    <updated>2014-01-08T01:59:56.000Z</updated>
+    <updated>2014-03-02T14:44:40.000Z</updated>
     <content type="html"><![CDATA[<p>好久没写算法了，突然一写发现有些生疏了。比如这两道算法题一眼看起来很简单，但是实际写起来却很麻烦。</p>
 <h2 id="-">矩阵全排列问题</h2>
 <figure class="highlight"><table><tr><td class="gutter"><pre>1
@@ -540,7 +540,7 @@ service network restart
     <link href="nateriver520.github.io/2014/01/04/2013-=-2014/"/>
     <id>nateriver520.github.io/2014/01/04/2013-=-2014/</id>
     <published>2014-01-04T03:28:25.000Z</published>
-    <updated>2014-01-04T04:44:48.000Z</updated>
+    <updated>2014-03-02T14:44:40.000Z</updated>
     <content type="html"><![CDATA[<p>最近拖延症又犯了，本来打算写个年度总结的，结果一直拖到今天。</p>
 <p>总体来说，今年算是收获颇多，变化很大的一年.</p>
 <h2 id="-">地理位置</h2>
@@ -573,7 +573,7 @@ service network restart
     <link href="nateriver520.github.io/2013/12/24/go-cron-相关项目源码阅读/"/>
     <id>nateriver520.github.io/2013/12/24/go-cron-相关项目源码阅读/</id>
     <published>2013-12-24T15:40:38.000Z</published>
-    <updated>2013-12-24T15:45:44.000Z</updated>
+    <updated>2014-03-02T14:44:40.000Z</updated>
     <content type="html"><![CDATA[<h2 id="-">介绍</h2>
 <p>这段时间一直想把之前写的 monitor 用 go 重写一遍，由于自己是 go 的初学者， 自然要参考一些 go 的项目的 source code 来深入学习 go。</p>
 <p>Monitor 项目中 cron 占了很大的比重， 所以本次代码阅读主要集中在 github 上两个 Star 数比较多的项目上。</p>
@@ -919,7 +919,7 @@ func main() {
     <link href="nateriver520.github.io/2013/12/06/tipit诞生记/"/>
     <id>nateriver520.github.io/2013/12/06/tipit诞生记/</id>
     <published>2013-12-06T15:12:44.000Z</published>
-    <updated>2013-12-06T15:41:35.000Z</updated>
+    <updated>2014-03-02T14:44:40.000Z</updated>
     <content type="html"><![CDATA[<h2 id="-">灵光一闪</h2>
 <p>之所以想做 Tip.It，完全是受自己初到北京时找房子各种痛苦的启发，当时为了跳过中介租房子，去58同城，豆瓣等各种网站去看房子，比如说下图就是一个典型的58同城的租房页面。</p>
 <p><img src="http://ww3.sinaimg.cn/large/7ed77ab1jw1ebaeffqboij20l30d80u5.jpg" alt=""></p>
@@ -989,7 +989,7 @@ func main() {
     <link href="nateriver520.github.io/2013/11/26/pig-on-mac/"/>
     <id>nateriver520.github.io/2013/11/26/pig-on-mac/</id>
     <published>2013-11-26T02:14:19.000Z</published>
-    <updated>2013-11-26T02:28:40.000Z</updated>
+    <updated>2014-03-02T15:37:30.000Z</updated>
     <content type="html"><![CDATA[<h2 id="install">Install</h2>
 <p>首先是 Mac OS 下的安装</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre>1
@@ -1194,15 +1194,15 @@ DUMP Cntd_P_C;
 <p>但 pig 也有缺点，比如 debug 信息不明确等。 </p>
 <p>在日常写 pig 脚本时，可以通过 <strong><em>Describe</em></strong> 的方式来查看当前结果的结构来方便编码。</p>
 ]]></content>
-    <category scheme="nateriver520.github.io/tags/Hadoop/" term="Hadoop"/>
-    <category scheme="nateriver520.github.io/tags/Pig/" term="Pig"/>
+    <category scheme="nateriver520.github.io/tags/hadoop/" term="hadoop"/>
+    <category scheme="nateriver520.github.io/tags/pig/" term="pig"/>
   </entry>
   <entry>
     <title type="html"><![CDATA[jing js (二)]]></title>
     <link href="nateriver520.github.io/2013/11/10/jing-js-(二)/"/>
     <id>nateriver520.github.io/2013/11/10/jing-js-(二)/</id>
     <published>2013-11-10T01:34:05.000Z</published>
-    <updated>2013-11-10T06:01:07.000Z</updated>
+    <updated>2014-03-02T14:44:40.000Z</updated>
     <content type="html"><![CDATA[<h2 id="javascript-engine">Javascript Engine</h2>
 <h3 id="parser">Parser</h3>
 <figure class="highlight"><table><tr><td class="gutter"><pre>1
@@ -1345,7 +1345,7 @@ DUMP Cntd_P_C;
     <link href="nateriver520.github.io/2013/11/09/jing-js-(一)/"/>
     <id>nateriver520.github.io/2013/11/09/jing-js-(一)/</id>
     <published>2013-11-09T12:52:30.000Z</published>
-    <updated>2013-11-10T06:02:03.000Z</updated>
+    <updated>2014-03-02T14:44:40.000Z</updated>
     <content type="html"><![CDATA[<h2 id="info">Info</h2>
 <p>这次<strong><em>lyk</em></strong>同学北上，参加 <a href="http://jingjs.org/" target="_blank">jingjs</a> ,我托lyk童鞋的福，也去jing js打了次酱油。</p>
 <p>以下是本次大会两天议程的简要笔记。</p>
@@ -1588,7 +1588,7 @@ To run <span class="operator">the</span> leveldb adventures, you will need <span
     <link href="nateriver520.github.io/2013/11/06/thrift入门-(一)/"/>
     <id>nateriver520.github.io/2013/11/06/thrift入门-(一)/</id>
     <published>2013-11-06T06:22:06.000Z</published>
-    <updated>2013-11-06T06:53:17.000Z</updated>
+    <updated>2014-03-02T14:44:40.000Z</updated>
     <content type="html"><![CDATA[<h2 id="install">Install</h2>
 <p>Go to <a href="http://thrift.apache.org/download/" target="_blank">thrift</a> page download thrift.</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre>1
@@ -1871,7 +1871,7 @@ add plugin</p>
     <link href="nateriver520.github.io/2013/11/03/永远不要放弃做梦的权利/"/>
     <id>nateriver520.github.io/2013/11/03/永远不要放弃做梦的权利/</id>
     <published>2013-11-02T16:34:36.000Z</published>
-    <updated>2013-11-02T16:41:08.000Z</updated>
+    <updated>2014-03-02T14:44:40.000Z</updated>
     <content type="html"><![CDATA[<h2 id="-">引言</h2>
 <p>时间过的真快，自己不知不觉已经工作了6个多月，又到了新一年的毕业季，突然翻出去年此时写的一篇文章还是蛮有感慨的。</p>
 <h2 id="-">去年</h2>
@@ -1908,7 +1908,7 @@ Offer的那天中午，班长突然短信说有家名为中软的公司在学校
     <link href="nateriver520.github.io/2013/11/02/用express搭建-blog-(一)/"/>
     <id>nateriver520.github.io/2013/11/02/用express搭建-blog-(一)/</id>
     <published>2013-11-02T15:46:58.000Z</published>
-    <updated>2013-11-02T16:00:30.000Z</updated>
+    <updated>2014-03-02T14:44:40.000Z</updated>
     <content type="html"><![CDATA[<h2 id="info">Info</h2>
 <p>公司马上要举行 hack day 了，这次决定和小伙伴用 Express 作为框架来搭建我们的应用，所以昨天搭出来UI后，今天开始系统的学习下 Express。</p>
 <h2 id="start">Start</h2>
@@ -2258,7 +2258,7 @@ app<span class="preprocessor">.use</span>(express<span class="preprocessor">.ses
     <link href="nateriver520.github.io/2013/11/02/mac-os-109-软件环境故障排查/"/>
     <id>nateriver520.github.io/2013/11/02/mac-os-109-软件环境故障排查/</id>
     <published>2013-11-02T13:20:08.000Z</published>
-    <updated>2013-11-02T13:21:55.000Z</updated>
+    <updated>2014-03-02T14:44:40.000Z</updated>
     <content type="html"><![CDATA[<p>之前在10.7上搭配好了一系列的软件环境。</p>
 <p>在升级到10.9后，基本上所有的软件环境都没有了。</p>
 <p>试图通过 brew 安装 mongo db 也编译出错。本篇 blog 就是基于上述问题的一系列排查。</p>
@@ -2288,7 +2288,7 @@ app<span class="preprocessor">.use</span>(express<span class="preprocessor">.ses
     <link href="nateriver520.github.io/2013/10/19/使用-nodejs-做-function-test/"/>
     <id>nateriver520.github.io/2013/10/19/使用-nodejs-做-function-test/</id>
     <published>2013-10-19T07:20:48.000Z</published>
-    <updated>2013-11-02T15:51:46.000Z</updated>
+    <updated>2014-03-02T14:44:40.000Z</updated>
     <content type="html"><![CDATA[<h2 id="info">Info</h2>
 <p>上周 meeting 上同事说他们现在在用 java 写 function test，产生了很多冗余的代码，整个项目也变得比较臃肿。现在迫切需要个简单的模板项目能快速搭建function test。</p>
 <p>后来我回去想了想，为什么我们非得用 java 来做 function test 呢? </p>
@@ -2641,7 +2641,7 @@ testosterone
     <link href="nateriver520.github.io/2013/10/18/building-a-micro-team/"/>
     <id>nateriver520.github.io/2013/10/18/building-a-micro-team/</id>
     <published>2013-10-18T13:03:39.000Z</published>
-    <updated>2013-11-03T04:05:18.000Z</updated>
+    <updated>2014-03-02T15:37:10.000Z</updated>
     <content type="html"><![CDATA[<p>最近这两周一直在忙，忙到忘记回QQ和微信的程度，甚至有两天下班回来直接躺平，虽说忙碌但是也收获了不少。</p>
 <h2 id="start">Start</h2>
 <p>说起来有趣，最近在忙的这个项目最初是公司设立的用于工程师在业余时间开发的project，正式参与这个项目时正好是自己所在team的空闲期，并且对他们的team在tech talk介绍过的项目很感兴趣，就联系了他们team的leader，利用下班时间帮他们写项目。</p>
@@ -2676,14 +2676,14 @@ testosterone
 <p>无论如何，这次Scrum经历是个非常难得的经历，自己收获颇丰。</p>
 <p>在此感谢下我的team member :) 感谢大家的hard work。</p>
 ]]></content>
-    <category scheme="nateriver520.github.io/tags/Scrum/" term="Scrum"/>
+    <category scheme="nateriver520.github.io/tags/scrum/" term="scrum"/>
   </entry>
   <entry>
     <title type="html"><![CDATA[Memcached 使用与简单监测]]></title>
     <link href="nateriver520.github.io/2013/10/13/memcached-使用与简单检测/"/>
     <id>nateriver520.github.io/2013/10/13/memcached-使用与简单检测/</id>
     <published>2013-10-13T06:35:18.000Z</published>
-    <updated>2013-10-28T03:46:45.000Z</updated>
+    <updated>2014-03-02T15:37:22.000Z</updated>
     <content type="html"><![CDATA[<h2 id="introduce">Introduce</h2>
 <p><a href="http://memcached.org/" target="_blank">Memcached</a>作为一个高并发内存Cached系统被很多大公司使用，最近也一直在用Memcached做项目也积累了一些相关经验。</p>
 <p>本篇博文主要记录Memcached的一些基本使用和简单的Monitor</p>
@@ -2796,15 +2796,15 @@ testosterone
 <p>但有时高并发可能会出现Timeout的情况，导致缓冲没办法命中的情况，具体原因还需要进一步调查。</p>
 <p>Memcahed的作者最近用Go语言去写了<a href="https://github.com/golang/groupcache" target="_blank">groupcache</a>很值得关注。</p>
 ]]></content>
-    <category scheme="nateriver520.github.io/tags/Memcached/" term="Memcached"/>
-    <category scheme="nateriver520.github.io/tags/Java/" term="Java"/>
+    <category scheme="nateriver520.github.io/tags/memcached/" term="memcached"/>
+    <category scheme="nateriver520.github.io/tags/java/" term="java"/>
   </entry>
   <entry>
     <title type="html"><![CDATA[New Start]]></title>
     <link href="nateriver520.github.io/2013/10/13/new-start/"/>
     <id>nateriver520.github.io/2013/10/13/new-start/</id>
     <published>2013-10-12T17:19:09.000Z</published>
-    <updated>2013-10-19T08:51:48.000Z</updated>
+    <updated>2014-03-02T14:44:40.000Z</updated>
     <content type="html"><![CDATA[<p>一直以来自己都没有记录的习惯，平常最多在evernote上记录些重要的信息。</p>
 <p>后来读了一篇blog说整理知识的重要性才恍然大悟，一直以来自己都是试图让一门技术快速上手，而记录的很少，等时间一久，很多用过的东西就忘记了。</p>
 <p>比如之前在EMC实习时写过很长时间的python，现在也忘记的七七八八。再加上自己在新的公司入职快6个月，各种新的信息铺面而来，更需要整理和提炼。</p>
