@@ -4,13 +4,33 @@
   <subtitle><![CDATA[Learning and Thinking]]></subtitle>
   <link href="nateriver520.github.io/atom.xml" rel="self"/>
   <link href="nateriver520.github.io"/>
-  <updated>2014-03-02T15:37:55.126Z</updated>
+  <updated>2014-03-02T16:16:10.462Z</updated>
   <id>nateriver520.github.io/</id>
   <author>
     <name><![CDATA[Shuo Yang]]></name>
     <email><![CDATA[shuo.yang@yahoo.com]]></email>
   </author>
   <generator uri="http://zespia.tw/hexo">Hexo</generator>
+  <entry>
+    <title type="html"><![CDATA[各种Sharing]]></title>
+    <link href="nateriver520.github.io/2014/03/02/各种sharing/"/>
+    <id>nateriver520.github.io/2014/03/02/各种sharing/</id>
+    <published>2014-03-02T15:45:16.000Z</published>
+    <updated>2014-03-02T16:16:02.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="-">前言</h2>
+<p>前段时间工作的重心在实验各种数据存储和处理工具，以此来满足我们项目的需求，于是工作的重心便是各种搭环境，由于公司机器的特殊性，在试图用公司的机器搭环境遇到几次坑后，果断选了开 Virtual Box 搭环境的方式。</p>
+<p>不过就是这样，由于Hadoop生态系统的复杂性，也遇到了各种坑。</p>
+<h2 id="sharing">Sharing</h2>
+<p>随后便有了这次 Sharing 关于前段时间实验的各种各样的存储工具和机器学习工具。</p>
+<p><img src="http://ww1.sinaimg.cn/large/7ed77ab1gw1ee1uygfesaj21kw0vn43q.jpg" alt=""></p>
+<a id="more"></a>
+
+<h2 id="slide">Slide</h2>
+<p>话不多说,放出 slide 的地址, 以后会陆陆续续介绍上面的东东 :)</p>
+<p><a href="http://vdisk.weibo.com/s/dZJf9oz6ROzB" target="_blank">Store Tools Introduction</a></p>
+]]></content>
+    <category scheme="nateriver520.github.io/tags/life/" term="life"/>
+  </entry>
   <entry>
     <title type="html"><![CDATA[用Virtual Box搭建集群环境]]></title>
     <link href="nateriver520.github.io/2014/02/26/用virtual-box搭建集群环境/"/>

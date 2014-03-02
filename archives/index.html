@@ -69,6 +69,59 @@
     <header>
       
         <div class="icon"></div>
+        <time datetime="2014-03-02T15:45:16.000Z"><a href="/2014/03/02/各种sharing/">Mar 2 2014</a></time>
+      
+      
+  
+    <h1 class="title"><a href="/2014/03/02/各种sharing/">各种Sharing</a></h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <h2 id="-">前言</h2>
+<p>前段时间工作的重心在实验各种数据存储和处理工具，以此来满足我们项目的需求，于是工作的重心便是各种搭环境，由于公司机器的特殊性，在试图用公司的机器搭环境遇到几次坑后，果断选了开 Virtual Box 搭环境的方式。</p>
+<p>不过就是这样，由于Hadoop生态系统的复杂性，也遇到了各种坑。</p>
+<h2 id="sharing">Sharing</h2>
+<p>随后便有了这次 Sharing 关于前段时间实验的各种各样的存储工具和机器学习工具。</p>
+<p><img src="http://ww1.sinaimg.cn/large/7ed77ab1gw1ee1uygfesaj21kw0vn43q.jpg" alt=""></p>
+
+      
+    </div>
+    <footer>
+      
+        
+          <div class="alignleft">
+            <a href="/2014/03/02/各种sharing/#more" class="more-link">Read More</a>
+          </div>
+        
+        
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+  
+    <article class="post">
+  
+    <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
         <time datetime="2014-02-26T13:18:11.000Z"><a href="/2014/02/26/用virtual-box搭建集群环境/">Feb 26 2014</a></time>
       
       
@@ -264,82 +317,6 @@
         
           <div class="alignleft">
             <a href="/2013/12/24/go-cron-相关项目源码阅读/#more" class="more-link">Read More</a>
-          </div>
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-  
-    <article class="post">
-  
-    <div class="gallery">
-  <div class="photoset">
-    
-      <img src="">
-    
-  </div>
-  <div class="control">
-    <div class="prev"></div>
-    <div class="next"></div>
-  </div>
-</div>
-  
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2013-12-06T15:12:44.000Z"><a href="/2013/12/06/tipit诞生记/">Dec 6 2013</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/2013/12/06/tipit诞生记/">Tip.It诞生记</a></h1>
-  
-
-    </header>
-    <div class="entry">
-      
-        <h2 id="-">灵光一闪</h2>
-<p>之所以想做 Tip.It，完全是受自己初到北京时找房子各种痛苦的启发，当时为了跳过中介租房子，去58同城，豆瓣等各种网站去看房子，比如说下图就是一个典型的58同城的租房页面。</p>
-<p><img src="http://ww3.sinaimg.cn/large/7ed77ab1jw1ebaeffqboij20l30d80u5.jpg" alt=""></p>
-<p>可以看到电话号码是图片，如果我想记录这个房源，只能一个个号码的往自己的Evernote里面敲，同时还得记录这个房源的网址，以防自己空有号码但是忘记房源信息的尴尬。</p>
-<p>即便这样，还是经常导致自己 chrome tab 开了几十个，分不清是否已经电话过某房源的主人的情况发生。</p>
-<p>所以我灵光一闪，为什么我们不把这个做成一个可以追述原地址，同时可以保存文字，图片和链接的 todo-list 呢？</p>
-<p>这个todo-list不同于evernote，它一打开就是我们要做的东西，里面的内容更像是对网页最有价值的部分的提炼。这个提炼我们会在短时间内频繁的用到，比如我们需要回复某人的邮件，网上看见优惠码等等。</p>
-<p>而我自己本人则在不找房子的时候，用来管理我的 bug 清单同时用来记录自己感兴趣但是又需要花时间来阅读的文章链接。</p>
-<h2 id="-">动手</h2>
-<p>来了 yahoo 之后，自己从最喜欢的 firefox 逐步迁移到了 chrome, 后来经过一番调研后发现 chrome 的 extension 还很好写， 于是自己开始了 chrome 插件的开发之旅。当时自己定的开发目标是这样的。</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre>1
-2
-3
-4
-5
-6
-7
-</pre></td><td class="code"><pre>  -<span class="ruby"> 能够 tip 网上的地图，视频，文字以及链接。
-</span>  -<span class="ruby"> 通过每条 tip， 用户都能轻易的找到 tip 的原始链接。
-</span>  -<span class="ruby"> 用户对每条 tip 添加备注。
-</span>  -<span class="ruby"> 能够自动同步，就像evernote一样。
-</span>  -<span class="ruby"> 用户手动可以创建各种类型的tip。
-</span>  -<span class="ruby"> 有完整的登陆认证功能。
-</span>  -<span class="ruby"> 后端的<span class="constant">Api</span>能够支持移动应用的开发。</span>
-</pre></td></tr></table></figure>
-
-<p>于是就有了第一版的半成品，有登陆，用户可以自由添加 tip，后端用的是 Rails，数据存储是 Mysql + Redis, Redis 主要用来分发用户的login token。</p>
-<p>可是当自己写到同步功能时，各种复杂的情况需要考虑，写出的程序自然是 bug 百出，同时考虑 Tip.It 设计的初衷是用户离线时也能使用，能够像 pocket 一样 archieve delete, 自然而然，程序逻辑变得非常复杂，用户每 sync 一次，mysql db 都要运行数十条语句。一度让我对这个项目产生了一些动摇，从最初的每天 check in code 到后面的长达一个月没有check in 过 code。</p>
-<h2 id="-">做减法</h2>
-<p>
-      
-    </div>
-    <footer>
-      
-        
-          <div class="alignleft">
-            <a href="/2013/12/06/tipit诞生记/#more" class="more-link">Read More</a>
           </div>
         
         
