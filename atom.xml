@@ -4,7 +4,7 @@
   <subtitle><![CDATA[Learning and Thinking]]></subtitle>
   <link href="nateriver520.github.io/atom.xml" rel="self"/>
   <link href="nateriver520.github.io"/>
-  <updated>2014-03-03T01:40:12.783Z</updated>
+  <updated>2014-03-03T01:41:05.629Z</updated>
   <id>nateriver520.github.io/</id>
   <author>
     <name><![CDATA[Shuo Yang]]></name>
@@ -36,7 +36,7 @@
     <link href="nateriver520.github.io/2014/02/26/用virtual-box搭建集群环境/"/>
     <id>nateriver520.github.io/2014/02/26/用virtual-box搭建集群环境/</id>
     <published>2014-02-26T13:18:11.000Z</published>
-    <updated>2014-03-03T01:39:54.000Z</updated>
+    <updated>2014-03-03T01:40:45.000Z</updated>
     <content type="html"><![CDATA[<h2 id="-">引言</h2>
 <p>前段时间一直在实验各种大数据查询和存储工具，由于公司的机器是特别定制的，搭环境不是很方便，而且不能随时上去玩，所以就考虑用Virtual Box搭建集群的方式测试各种工具。</p>
 <h2 id="-">环境</h2>
@@ -250,7 +250,7 @@ service network restart
 
 <p>集群这样就搭建完成啦。整个过程真累，尤其是网卡这块折腾了半天。</p>
 ]]></content>
-    <category scheme="nateriver520.github.io/tags/cluster/" term="cluster"/>
+    <category scheme="nateriver520.github.io/tags/hadoop/" term="hadoop"/>
   </entry>
   <entry>
     <title type="html"><![CDATA[两道算法]]></title>
@@ -1009,7 +1009,7 @@ func main() {
     <link href="nateriver520.github.io/2013/11/26/pig-on-mac/"/>
     <id>nateriver520.github.io/2013/11/26/pig-on-mac/</id>
     <published>2013-11-26T02:14:19.000Z</published>
-    <updated>2014-03-03T01:39:11.000Z</updated>
+    <updated>2014-03-03T01:40:54.000Z</updated>
     <content type="html"><![CDATA[<h2 id="install">Install</h2>
 <p>首先是 Mac OS 下的安装</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre>1
@@ -1214,6 +1214,7 @@ DUMP Cntd_P_C;
 <p>但 pig 也有缺点，比如 debug 信息不明确等。 </p>
 <p>在日常写 pig 脚本时，可以通过 <strong><em>Describe</em></strong> 的方式来查看当前结果的结构来方便编码。</p>
 ]]></content>
+    <category scheme="nateriver520.github.io/tags/hadoop/" term="hadoop"/>
     <category scheme="nateriver520.github.io/tags/pig/" term="pig"/>
   </entry>
   <entry>

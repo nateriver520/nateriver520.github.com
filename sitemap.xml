@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>nateriver520.github.io/2013/11/26/pig-on-mac/</loc>
+    <lastmod>2014-03-03T01:40:54.000Z</lastmod>
+  </url>
+  <url>
     <loc>nateriver520.github.io/2014/02/26/用virtual-box搭建集群环境/</loc>
-    <lastmod>2014-03-03T01:39:54.000Z</lastmod>
+    <lastmod>2014-03-03T01:40:45.000Z</lastmod>
   </url>
   <url>
     <loc>nateriver520.github.io/2013/10/18/building-a-micro-team/</loc>
     <lastmod>2014-03-03T01:39:31.000Z</lastmod>
-  </url>
-  <url>
-    <loc>nateriver520.github.io/2013/11/26/pig-on-mac/</loc>
-    <lastmod>2014-03-03T01:39:11.000Z</lastmod>
   </url>
   <url>
     <loc>nateriver520.github.io/2013/10/13/memcached-使用与简单检测/</loc>
@@ -21,7 +21,15 @@
     <lastmod>2014-03-02T16:16:02.000Z</lastmod>
   </url>
   <url>
-    <loc>nateriver520.github.io/2013/10/19/使用-nodejs-做-function-test/</loc>
+    <loc>nateriver520.github.io/2013/12/06/tipit诞生记/</loc>
+    <lastmod>2014-03-02T14:44:40.000Z</lastmod>
+  </url>
+  <url>
+    <loc>nateriver520.github.io/2014/01/04/2013-=-2014/</loc>
+    <lastmod>2014-03-02T14:44:40.000Z</lastmod>
+  </url>
+  <url>
+    <loc>nateriver520.github.io/2013/10/13/new-start/</loc>
     <lastmod>2014-03-02T14:44:40.000Z</lastmod>
   </url>
   <url>
@@ -29,7 +37,7 @@
     <lastmod>2014-03-02T14:44:40.000Z</lastmod>
   </url>
   <url>
-    <loc>nateriver520.github.io/2013/12/06/tipit诞生记/</loc>
+    <loc>nateriver520.github.io/2013/12/24/go-cron-相关项目源码阅读/</loc>
     <lastmod>2014-03-02T14:44:40.000Z</lastmod>
   </url>
   <url>
@@ -37,11 +45,11 @@
     <lastmod>2014-03-02T14:44:40.000Z</lastmod>
   </url>
   <url>
-    <loc>nateriver520.github.io/2013/12/24/go-cron-相关项目源码阅读/</loc>
+    <loc>nateriver520.github.io/2013/10/19/使用-nodejs-做-function-test/</loc>
     <lastmod>2014-03-02T14:44:40.000Z</lastmod>
   </url>
   <url>
-    <loc>nateriver520.github.io/2014/01/04/2013-=-2014/</loc>
+    <loc>nateriver520.github.io/2013/11/09/jing-js-(一)/</loc>
     <lastmod>2014-03-02T14:44:40.000Z</lastmod>
   </url>
   <url>
@@ -53,19 +61,11 @@
     <lastmod>2014-03-02T14:44:40.000Z</lastmod>
   </url>
   <url>
-    <loc>nateriver520.github.io/2013/11/09/jing-js-(一)/</loc>
-    <lastmod>2014-03-02T14:44:40.000Z</lastmod>
-  </url>
-  <url>
     <loc>nateriver520.github.io/2013/11/10/jing-js-(二)/</loc>
     <lastmod>2014-03-02T14:44:40.000Z</lastmod>
   </url>
   <url>
     <loc>nateriver520.github.io/2013/11/02/mac-os-109-软件环境故障排查/</loc>
-    <lastmod>2014-03-02T14:44:40.000Z</lastmod>
-  </url>
-  <url>
-    <loc>nateriver520.github.io/2013/10/13/new-start/</loc>
     <lastmod>2014-03-02T14:44:40.000Z</lastmod>
   </url>
   <url>
